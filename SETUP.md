@@ -5,6 +5,23 @@ No coding required. Total cost: **$99/yr Apple + about $10–12/yr for a domain.
 
 ---
 
+## Where things stand
+
+| Step | Status |
+|---|---|
+| 1. D-U-N-S number | **Not started** — do this first, it takes up to two weeks |
+| 2. Domain (`tallietales.com`) | **Not started** |
+| 3. Email at the domain | **Not started** — blocked by Step 2 |
+| 4. Site written and committed | **Done** — three pages, public repo |
+| 4b. GitHub Pages switched on | **Not started** — five minutes, nothing blocks it |
+| 5. Apple enrollment | **Not started** — needs Steps 1, 2 and 3 |
+| 6. App Store Connect URLs | **Not started** — needs the app itself |
+
+Steps 1 and 2 are independent and both have waiting time built in, so start them
+on the same day. Step 4b can be done right now.
+
+---
+
 ## What Apple actually requires
 
 | Requirement | Where it's needed | Which file covers it |
@@ -58,7 +75,7 @@ In Cloudflare → your domain → **DNS**, add these (this is what points your d
 | A | `@` | `185.199.109.153` | **DNS only** |
 | A | `@` | `185.199.110.153` | **DNS only** |
 | A | `@` | `185.199.111.153` | **DNS only** |
-| CNAME | `www` | `YOURUSERNAME.github.io` | **DNS only** |
+| CNAME | `www` | `thaye712-ship-it.github.io` | **DNS only** |
 
 The grey cloud matters. If the orange proxy cloud is on, GitHub can't issue your HTTPS
 certificate and the site will show a security warning.
@@ -88,23 +105,35 @@ Start with A. Move to B if you want replies to look right.
 
 ---
 
-## Step 4 — Put the site online (free, ~10 minutes)
+## Step 4 — Put the site online (free, ~5 minutes)
 
-1. Create a free account at **github.com** if you don't have one.
-2. Click **+** (top right) → **New repository**.
-   - Name it `tallietales-site`
-   - Set it to **Public** (required for free GitHub Pages)
-   - Click **Create repository**
-3. On the new repo page, click **uploading an existing file**.
-4. Drag in `index.html`, `support.html`, and `privacy.html`. Click **Commit changes**.
-5. Go to **Settings** (top of the repo) → **Pages** (left sidebar).
-   - Under *Source*, choose **Deploy from a branch**
-   - Branch: `main`, folder: `/ (root)` → **Save**
-6. Wait 1–2 minutes. Your site is live at `https://YOURUSERNAME.github.io/tallietales-site/`
-7. Still on the Pages screen, under **Custom domain**, type `tallietales.com` → **Save**.
-8. Wait for the DNS check to pass, then tick **Enforce HTTPS**. This can take up to an hour.
+**Already done:** the repository `thaye712-ship-it/tallietales-site` exists, it is
+public, and `index.html`, `support.html`, and `privacy.html` are committed to it.
+You do not need to create a repo or drag files in.
 
-Your final URLs:
+What is left is switching Pages on:
+
+1. Go to **github.com/thaye712-ship-it/tallietales-site** → **Settings** (top of
+   the repo) → **Pages** (left sidebar).
+2. Under *Source*, choose **Deploy from a branch**.
+3. Branch: **`claude/basic-website-b4flaw`** — this is the repository's default
+   branch, and the one holding the site files. Folder: **`/ (root)`** → **Save**.
+4. Wait 1–2 minutes. The site is live at:
+
+   ```
+   https://thaye712-ship-it.github.io/tallietales-site/
+   ```
+
+That URL is enough to start Apple enrollment against if the domain is not ready
+yet, though Apple prefers a site on a domain you own — so do Step 2 as well.
+
+5. Once the domain exists and its DNS records are set, come back to this screen.
+   Under **Custom domain**, type `tallietales.com` → **Save**.
+6. Wait for the DNS check to pass, then tick **Enforce HTTPS**. This can take up
+   to an hour. Do not skip it — Apple will follow the link, and a certificate
+   warning is a bad first impression.
+
+Final URLs once the domain is attached:
 
 ```
 https://tallietales.com/
@@ -112,8 +141,14 @@ https://tallietales.com/support.html
 https://tallietales.com/privacy.html
 ```
 
-**To change anything later:** open the file on github.com, click the pencil icon, edit,
-click Commit. The live site updates in about a minute.
+> **A note on the branch name.** `claude/basic-website-b4flaw` is an odd name for
+> a permanent site, but it is only ever visible in repository settings — never in
+> a URL or to a visitor. Renaming it to `main` is optional tidying; if you do
+> rename it, change the branch in Settings → Pages to match or the site will go
+> offline.
+
+**To change anything later:** open the file on github.com, click the pencil icon,
+edit, and click Commit. The live site updates in about a minute.
 
 ---
 
