@@ -1,59 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tallie Tales</title>
-  <meta name="description" content="Tallie Tales — a small corner of the web.">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tallie Tales LLC — Drive Log for pile driving</title>
+<meta name="description" content="Tallie Tales LLC builds Drive Log, an iPhone app for recording pile driving blow counts in the field.">
+<style>
+  :root{
+    --bg:#ffffff; --panel:#f6f7f8; --ink:#16191d; --muted:#5b6470;
+    --line:#e2e5e9; --accent:#c25e00; --accent-ink:#ffffff;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --bg:#14171a; --panel:#1c2024; --ink:#eceef0; --muted:#a2abb5;
+           --line:#2b3036; --accent:#ff8c2b; --accent-ink:#14171a; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-text-size-adjust:100%}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px}
+  header{border-bottom:1px solid var(--line);padding:22px 0}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .brand{font-weight:700;letter-spacing:-.01em;text-decoration:none;color:var(--ink);font-size:17px}
+  nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:15px}
+  nav a:hover{color:var(--accent)}
+  main{padding:56px 0 72px}
+  h1{font-size:34px;line-height:1.2;letter-spacing:-.02em;margin:0 0 14px}
+  h2{font-size:20px;letter-spacing:-.01em;margin:44px 0 12px}
+  .lede{font-size:18px;color:var(--muted);margin:0 0 32px}
+  p{margin:0 0 16px}
+  ul{margin:0 0 16px;padding-left:22px}
+  li{margin:0 0 8px}
+  a{color:var(--accent)}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:0 0 16px}
+  .card p:last-child{margin-bottom:0}
+  .tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--accent-ink);background:var(--accent);padding:4px 10px;border-radius:999px;margin-bottom:18px}
+  footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:14px}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--accent)}
+  .fnav a{margin-right:18px}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html">Tallie&nbsp;Tales</a>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html">Tallie Tales LLC</a>
     <nav>
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="about.html">About</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section class="hero">
-      <h1>Tallie Tales</h1>
-      <p class="lede">A small corner of the web. Replace this line with what the site is actually for.</p>
-      <a class="button" href="about.html">Learn more</a>
-    </section>
+<main>
+  <div class="wrap">
+    <span class="tag">iPhone app</span>
+    <h1>Drive Log</h1>
+    <p class="lede">A field tool for recording pile driving blow counts — built for the person standing at the rig with a clipboard.</p>
 
-    <section>
-      <h2>What&rsquo;s here</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Stories</h3>
-          <p>Short pieces, notes, and whatever else is worth writing down.</p>
-        </article>
-        <article class="card">
-          <h3>Updates</h3>
-          <p>Occasional news about what&rsquo;s new or changing.</p>
-        </article>
-        <article class="card">
-          <h3>Get in touch</h3>
-          <p>Questions, ideas, or corrections are always welcome.</p>
-        </article>
-      </div>
-    </section>
+    <p>Drive Log replaces the paper pile driving log. You tap out blow counts as the hammer runs, the app tracks penetration by the foot, and you leave the site with a clean record instead of a wind-blown, mud-streaked sheet to transcribe later.</p>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
-    </section>
-  </main>
+    <h2>What it does</h2>
+    <ul>
+      <li>Count blows per foot or per set with a large, glove-friendly tap target</li>
+      <li>Track penetration, driving resistance, and refusal against each pile</li>
+      <li>Keep pile, project, and rig details attached to every log</li>
+      <li>Review and correct a log before it leaves the field</li>
+      <li>Export a finished log for the project record</li>
+    </ul>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year">2026</span> Tallie Tales</p>
-  </footer>
+    <h2>Your data stays on your phone</h2>
+    <div class="card">
+      <p>Drive Log has no accounts, no sign-in, and no server. Every log you record is stored on your iPhone and nowhere else. We do not collect, transmit, sell, or share your data — read the full <a href="privacy.html">privacy policy</a>.</p>
+    </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <h2>About Tallie Tales LLC</h2>
+    <p>Tallie Tales LLC is a United States limited liability company that develops purpose-built mobile software for construction and deep foundation work. Drive Log is our first iPhone application.</p>
+
+    <h2>Contact</h2>
+    <div class="card">
+      <p><strong>Email:</strong> <a href="mailto:support@tallietales.com">support@tallietales.com</a><br>
+      We answer support requests, bug reports, and feature suggestions within two business days.</p>
+      <p style="margin-top:12px">For help with the app, see the <a href="support.html">support page</a>.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="fnav">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+    <p>© 2026 Tallie Tales LLC. All rights reserved.</p>
+  </div>
+</footer>
+
 </body>
 </html>

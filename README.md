@@ -1,15 +1,23 @@
-# Tallie Tales
+# Tallie Tales LLC — website
 
-A very basic static website. Plain HTML and CSS — no frameworks, no build step,
-no dependencies.
+The public website for Tallie Tales LLC and its iPhone app, **Drive Log**.
 
-## Files
+Three static pages, plain HTML with inline CSS — no framework, no build step, no
+dependencies. Each page is self-contained so it can be edited or re-uploaded on
+its own.
 
-| File         | Purpose                                  |
-| ------------ | ---------------------------------------- |
-| `index.html` | Home page (hero, sections, contact)      |
-| `about.html` | About page                               |
-| `style.css`  | All styling, shared by both pages        |
+## Pages
+
+| File           | Serves as                | Used for                              |
+| -------------- | ------------------------ | ------------------------------------- |
+| `index.html`   | Company + product home   | Apple Organization enrollment website |
+| `support.html` | Drive Log support & FAQ  | App Store **Support URL**             |
+| `privacy.html` | Privacy policy           | App Store **Privacy Policy URL**      |
+
+`SETUP.md` is the full walkthrough: D-U-N-S number, domain, email at the domain,
+GitHub Pages deployment, Apple enrollment, and the App Store Connect fields.
+Read that first — it also lists the app-specific details to double-check before
+submitting.
 
 ## Viewing it locally
 
@@ -22,16 +30,12 @@ python3 -m http.server 8000
 
 ## Publishing
 
-The site is static, so it can be hosted anywhere. For GitHub Pages: repository
-**Settings → Pages**, then set the source to this branch with the folder set to
-`/ (root)`.
+Repository **Settings → Pages** → source *Deploy from a branch*, folder
+`/ (root)`, and pick the branch these files are on. See `SETUP.md` step 4 for
+the custom domain and HTTPS.
 
 ## Editing
 
-- Text lives directly in the `.html` files; the placeholder copy is meant to be
-  replaced.
-- Colours, spacing, and fonts are CSS custom properties at the top of
-  `style.css`. Dark mode follows the visitor's system setting and uses the same
-  variables.
-- To add a page, copy `about.html`, change the title and content, and add a link
-  to the `<nav>` in both existing pages.
+Text lives directly in the `.html` files. Colours are CSS custom properties in
+the `<style>` block at the top of each page; because the pages are
+self-contained, a colour change has to be made in all three.
