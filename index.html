@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tallie Tales</title>
+  <meta name="description" content="Tallie Tales — a small corner of the web.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Tallie&nbsp;Tales</a>
+    <nav>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Tallie Tales</h1>
+      <p class="lede">A small corner of the web. Replace this line with what the site is actually for.</p>
+      <a class="button" href="about.html">Learn more</a>
+    </section>
+
+    <section>
+      <h2>What&rsquo;s here</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Stories</h3>
+          <p>Short pieces, notes, and whatever else is worth writing down.</p>
+        </article>
+        <article class="card">
+          <h3>Updates</h3>
+          <p>Occasional news about what&rsquo;s new or changing.</p>
+        </article>
+        <article class="card">
+          <h3>Get in touch</h3>
+          <p>Questions, ideas, or corrections are always welcome.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Tallie Tales</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About &middot; Tallie Tales</title>
+  <meta name="description" content="About Tallie Tales.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Tallie&nbsp;Tales</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>About</h1>
+      <p class="lede">A sentence or two on who is behind this and why it exists.</p>
+    </section>
+
+    <section>
+      <h2>The short version</h2>
+      <p>
+        Placeholder copy. Swap this out for the real story &mdash; how Tallie Tales
+        started, what you publish here, and how often.
+      </p>
+      <h2>Elsewhere</h2>
+      <ul>
+        <li><a href="index.html#contact">Email</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Tallie Tales</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
