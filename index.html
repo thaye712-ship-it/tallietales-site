@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tallie Tales LLC — Drive Log for pile driving</title>
-<meta name="description" content="Tallie Tales LLC builds Drive Log, an iPhone app for recording pile driving blow counts in the field.">
+<meta name="description" content="Tallie Tales LLC builds Drive Log, an iPhone app that listens to a pile hammer, counts blows automatically, checks driving criteria, and exports state DOT pile driving logs.">
 <style>
   :root{
     --bg:#ffffff; --panel:#f6f7f8; --ink:#16191d; --muted:#5b6470;
@@ -59,22 +59,40 @@
   <div class="wrap">
     <span class="tag">iPhone app</span>
     <h1>Drive Log</h1>
-    <p class="lede">A field tool for recording pile driving blow counts — built for the person standing at the rig with a clipboard.</p>
+    <p class="lede">A field tool that listens to the hammer, counts the blows, and hands you the state DOT pile driving log — built for the person standing at the rig with a clipboard.</p>
 
-    <p>Drive Log replaces the paper pile driving log. You tap out blow counts as the hammer runs, the app tracks penetration by the foot, and you leave the site with a clean record instead of a wind-blown, mud-streaked sheet to transcribe later.</p>
+    <p>Drive Log replaces the paper pile driving log. Set the phone near the rig and it counts every blow by ear, times the ram to read the stroke, keeps the count by the foot as you mark each one, checks the drive against the bearing criteria, and prints the finished record on your agency's own form. You leave the site with a clean log instead of a wind-blown, mud-streaked sheet to transcribe later.</p>
 
-    <h2>What it does</h2>
+    <h2>Counting by ear</h2>
     <ul>
-      <li>Count blows per foot or per set with a large, glove-friendly tap target</li>
-      <li>Track penetration, driving resistance, and refusal against each pile</li>
-      <li>Keep pile, project, and rig details attached to every log</li>
-      <li>Review and correct a log before it leaves the field</li>
-      <li>Export a finished log for the project record</li>
+      <li>The microphone counts blows automatically — no tapping — with a live waveform, an adjustable threshold for loud sites, and an ambient-noise option that raises it for you</li>
+      <li>Stroke for every blow, read from the hammer's own rhythm, shown live and averaged by the foot</li>
+      <li>One big glove-friendly MARK FOOT button; count in feet, tenths, inches, or a custom interval, and switch mid-drive</li>
+      <li>Keeps counting when a phone call or another app takes the microphone, and tells you when it lost it</li>
+      <li>Manual tap mode for when the mic is not the right tool</li>
     </ul>
+
+    <h2>The record</h2>
+    <ul>
+      <li>Projects, structures, substructures and piles laid out the way the plans are, with the inspector, hammer, pile type, cutoff, weather and temperature on every pile</li>
+      <li>Driving criteria set once per substructure — blows per foot, minimum stroke, penetration or tip elevation — with a met / short verdict on every pile that updates if the criteria change</li>
+      <li>Initial drive, redrives and restrikes on one log; splices, pile runs, fuel-setting changes, depth corrections and notes stamped where they happened</li>
+      <li>An editable drive log — fix a blow count or an ending depth on the phone, and the record shows both the original and the correction</li>
+      <li>Instant mode: a gut check that shows blows and stroke for any hammer without starting a pile</li>
+    </ul>
+
+    <h2>The forms</h2>
+    <p>Every pile exports as a PDF and as an Excel workbook, on the agency's own layout — measured off the blank form, with the header, the foot-by-foot table and the notes where the form puts them.</p>
+    <div class="card">
+      <p><strong>UDOT</strong> Pile Driving Record, plus <strong>FDOT</strong> 700-010-60, <strong>NCDOT</strong>, <strong>SCDOT</strong> 700.15, <strong>VDOT</strong>, <strong>GDOT</strong>, <strong>TDOT</strong>, <strong>LADOTD</strong> Log of Pile Driving and <strong>WSDOT</strong> 450-004A, and a plain record for any other owner. Export one pile, a substructure, a structure, or the whole project at once, and send it anywhere the iOS share sheet goes.</p>
+    </div>
+
+    <h2>Hammers</h2>
+    <p>A catalog of more than 250 diesel, hydraulic and air/steam hammers — Delmag, APE, Pileco, ICE, Junttan, Bermingham, Vulcan, Conmaco, BSP, Bruce, Liebherr and more — with ram weight, rated energy and stroke ready to check against the data plate. Add your own in thirty seconds.</p>
 
     <h2>Your data stays on your phone</h2>
     <div class="card">
-      <p>Drive Log has no accounts, no sign-in, and no server. Every log you record is stored on your iPhone and nowhere else. We do not collect, transmit, sell, or share your data — read the full <a href="privacy.html">privacy policy</a>.</p>
+      <p>Drive Log has no accounts, no sign-in, and no server. Every log you record is stored on your iPhone and nowhere else. The microphone is used only to hear the hammer — audio is analysed on the phone as it happens and is never recorded or stored. We do not collect, transmit, sell, or share your data — read the full <a href="privacy.html">privacy policy</a>.</p>
     </div>
 
     <h2>About Tallie Tales LLC</h2>
