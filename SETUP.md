@@ -64,44 +64,37 @@ turn it off — none of it is used. The domain name is all this setup needs.
 
 ### Set the DNS records — *do this now*
 
-DNS is edited **at whoever you bought the domain from**, not at GitHub. Log in
-there and look for a section called **DNS**, **DNS Records**, **Manage DNS**, or
-**Advanced DNS**. Then add these five records:
+The domain is registered with **Cloudflare Registrar**, so its nameservers already
+point at Cloudflare and DNS is edited there.
 
-| Type | Name / Host | Value / Points to | TTL |
+Go to **dash.cloudflare.com** → select `tallietales.com` → **DNS** → **Records** →
+*Add record*, and add these five:
+
+| Type | Name | Target / IPv4 address | Proxy status |
 |---|---|---|---|
-| A | `@` | `185.199.108.153` | Auto / default |
-| A | `@` | `185.199.109.153` | Auto / default |
-| A | `@` | `185.199.110.153` | Auto / default |
-| A | `@` | `185.199.111.153` | Auto / default |
-| CNAME | `www` | `thaye712-ship-it.github.io` | Auto / default |
+| A | `@` | `185.199.108.153` | **DNS only** (grey cloud) |
+| A | `@` | `185.199.109.153` | **DNS only** |
+| A | `@` | `185.199.110.153` | **DNS only** |
+| A | `@` | `185.199.111.153` | **DNS only** |
+| CNAME | `www` | `thaye712-ship-it.github.io` | **DNS only** |
 
-All four A records are required — they are GitHub's four Pages servers, and using
-only one costs you redundancy. `@` means the bare domain (`tallietales.com`); some
-registrars want the field left blank instead, and a few want `tallietales.com`
-typed out. The CNAME value must end in a dot at some registrars
-(`thaye712-ship-it.github.io.`) — if the form rejects it, add the trailing dot.
+Cloudflare accepts `@` in the Name field and displays it afterwards as
+`tallietales.com`. All four A records are required — they are GitHub's four Pages
+servers.
 
-**Where to click, by registrar:**
+**The proxy toggle is the one thing that will silently break this.** Cloudflare
+defaults new records to *Proxied* (orange cloud). Leave it orange and GitHub
+cannot complete the ACME challenge, so the HTTPS certificate never issues and
+visitors get a security warning — with the site otherwise appearing to work.
+Click each record's cloud icon until it reads **DNS only** and is grey.
 
-- **Cloudflare** — pick the domain → **DNS** → *Add record*. Set every record's
-  proxy toggle to **DNS only (grey cloud)**. This one matters: with the orange
-  proxy cloud on, GitHub cannot issue the HTTPS certificate and visitors get a
-  security warning.
-- **Porkbun** — **Domain Management** → the domain → **DNS** → *Add record*.
-- **Namecheap** — **Domain List** → *Manage* → **Advanced DNS** → *Add New Record*.
-  Delete the default "parking page" URL-redirect record if one is present, or it
-  will fight the A records.
-- **GoDaddy** — **My Products** → the domain → **DNS** → *Add*. Remove the default
-  parked `A @` record pointing somewhere else first.
-- **Squarespace / Google Domains** — the domain → **DNS** → *Custom records*.
+**Do not delete the MX or TXT records.** Cloudflare Email Routing uses them to
+deliver `support@tallietales.com`. Removing them breaks the address Apple uses to
+verify the organization, and that address is printed on all three pages. You are
+only adding records here, not clearing existing ones.
 
-**Delete any pre-existing `A @` record** that came with the domain. Registrars
-ship a parking-page record by default, and if it stays, the domain will keep
-resolving to the parking page for some visitors.
-
-Changes usually take effect in minutes, though DNS can take up to 24 hours to
-reach everywhere.
+Cloudflare applies DNS changes in well under a minute, though other networks may
+cache the old answer for a while.
 
 ---
 
