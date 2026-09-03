@@ -9,16 +9,21 @@ No coding required. Total cost: **$99/yr Apple + about $10–12/yr for a domain.
 
 | Step | Status |
 |---|---|
-| 1. D-U-N-S number | **Not started** — do this first, it takes up to two weeks |
-| 2. Domain (`tallietales.com`) | **Not started** |
-| 3. Email at the domain | **Not started** — blocked by Step 2 |
+| 1. D-U-N-S number | **Requested** — waiting on D&B, up to two weeks |
+| 2. Domain (`tallietales.com`) | **Done** — registered |
+| 3. Email at the domain | **Done** |
 | 4. Site written and committed | **Done** — three pages, public repo |
-| 4b. GitHub Pages switched on | **Not started** — five minutes, nothing blocks it |
-| 5. Apple enrollment | **Not started** — needs Steps 1, 2 and 3 |
-| 6. App Store Connect URLs | **Not started** — needs the app itself |
+| 4a. DNS records pointing at GitHub | **Not started** ← *next action* |
+| 4b. GitHub Pages switched on | **Not started** ← *next action, 2 minutes* |
+| 4c. Custom domain + HTTPS | Blocked by 4a and 4b |
+| 5. Apple enrollment | Blocked by Step 1 (D-U-N-S) and 4c |
+| 6. App Store Connect URLs | Needs the finished app |
 
-Steps 1 and 2 are independent and both have waiting time built in, so start them
-on the same day. Step 4b can be done right now.
+The only things in your hands right now are 4a and 4b — set the DNS records and
+switch Pages on. Everything after that is waiting: DNS propagation, then the HTTPS
+certificate, then D&B. Apple enrollment cannot start until the D-U-N-S number
+arrives regardless, so the site being live a day early costs nothing and being
+late costs a day.
 
 ---
 
@@ -50,35 +55,53 @@ This takes up to two weeks, so start it before anything else.
 
 ---
 
-## Step 2 — Buy the domain (~$10–12/yr)
+## Step 2 — Buy the domain — **done**
 
-Register **tallietales.com** (or the closest available variation).
+`tallietales.com` is registered. Nothing further to do here.
 
-- **Cloudflare Registrar** sells at cost with no first-year gimmick pricing and no upsells.
-- **Porkbun** is comparable and slightly easier if you've never used Cloudflare.
+If any hosting, website-builder, or email-hosting add-on was bundled at checkout,
+turn it off — none of it is used. The domain name is all this setup needs.
 
-Avoid registrars advertising a $1 first year — the renewal is where they make it back.
+### Set the DNS records — *do this now*
 
-Whichever you pick, **turn off** any offer for hosting, website builder, or email hosting.
-You need the domain name only.
+DNS is edited **at whoever you bought the domain from**, not at GitHub. Log in
+there and look for a section called **DNS**, **DNS Records**, **Manage DNS**, or
+**Advanced DNS**. Then add these five records:
 
-> If you buy elsewhere, still create a free Cloudflare account and point the domain's
-> nameservers at Cloudflare — that's what makes the free email forwarding in Step 3 work.
-
-### Set the DNS records
-
-In Cloudflare → your domain → **DNS**, add these (this is what points your domain at GitHub):
-
-| Type | Name | Value | Proxy |
+| Type | Name / Host | Value / Points to | TTL |
 |---|---|---|---|
-| A | `@` | `185.199.108.153` | **DNS only** (grey cloud) |
-| A | `@` | `185.199.109.153` | **DNS only** |
-| A | `@` | `185.199.110.153` | **DNS only** |
-| A | `@` | `185.199.111.153` | **DNS only** |
-| CNAME | `www` | `thaye712-ship-it.github.io` | **DNS only** |
+| A | `@` | `185.199.108.153` | Auto / default |
+| A | `@` | `185.199.109.153` | Auto / default |
+| A | `@` | `185.199.110.153` | Auto / default |
+| A | `@` | `185.199.111.153` | Auto / default |
+| CNAME | `www` | `thaye712-ship-it.github.io` | Auto / default |
 
-The grey cloud matters. If the orange proxy cloud is on, GitHub can't issue your HTTPS
-certificate and the site will show a security warning.
+All four A records are required — they are GitHub's four Pages servers, and using
+only one costs you redundancy. `@` means the bare domain (`tallietales.com`); some
+registrars want the field left blank instead, and a few want `tallietales.com`
+typed out. The CNAME value must end in a dot at some registrars
+(`thaye712-ship-it.github.io.`) — if the form rejects it, add the trailing dot.
+
+**Where to click, by registrar:**
+
+- **Cloudflare** — pick the domain → **DNS** → *Add record*. Set every record's
+  proxy toggle to **DNS only (grey cloud)**. This one matters: with the orange
+  proxy cloud on, GitHub cannot issue the HTTPS certificate and visitors get a
+  security warning.
+- **Porkbun** — **Domain Management** → the domain → **DNS** → *Add record*.
+- **Namecheap** — **Domain List** → *Manage* → **Advanced DNS** → *Add New Record*.
+  Delete the default "parking page" URL-redirect record if one is present, or it
+  will fight the A records.
+- **GoDaddy** — **My Products** → the domain → **DNS** → *Add*. Remove the default
+  parked `A @` record pointing somewhere else first.
+- **Squarespace / Google Domains** — the domain → **DNS** → *Custom records*.
+
+**Delete any pre-existing `A @` record** that came with the domain. Registrars
+ship a parking-page record by default, and if it stays, the domain will keep
+resolving to the parking page for some visitors.
+
+Changes usually take effect in minutes, though DNS can take up to 24 hours to
+reach everywhere.
 
 ---
 
