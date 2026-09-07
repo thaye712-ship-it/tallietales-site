@@ -197,27 +197,34 @@ actually does — if you later add analytics or a crash reporter, both the label
 
 ---
 
-## Before you submit — fill in these blanks
+## Before you submit — check these
 
-The pages are written and ready, but a few things describe an app that doesn't exist yet.
-Check each one against the finished app:
+The pages now describe the real app, including the microphone. Confirm each of
+these against the finished build:
 
-- [ ] **App name.** The pages say "Drive Log" throughout. Change it everywhere if you pick
-      a different name.
-- [ ] **Feature list** on `index.html` — delete anything the v1 app won't ship with. Apple
-      reviewers do read the support page, and describing features that aren't there invites
-      questions.
-- [ ] **Export.** `support.html` and `privacy.html` both say logs can be exported through the
-      iOS share sheet. If v1 has no export, remove those lines.
-- [ ] **Version number location.** `support.html` tells users the version is "on the app's
-      settings screen." Point them wherever it actually is.
-- [ ] **Support email route exists.** All three pages now print
+- [ ] **Microphone purpose string.** The app must declare
+      `NSMicrophoneUsageDescription` in Info.plist, and the wording should match
+      what the site says — that it listens to the hammer to count blows and time
+      the stroke, and never records. A missing or vague purpose string is a
+      routine rejection.
+- [ ] **App Privacy answers.** "Data Not Collected" still holds *only* because
+      audio is analysed on device and never stored or transmitted. If any
+      analytics, crash reporter, or audio upload is ever added, both the App
+      Privacy label and `privacy.html` must change together.
+- [ ] **Beta forms.** `support.html` says agency forms other than UDOT and Plain
+      are marked beta in the picker. Make sure the app actually marks them that
+      way, or reword the page.
+- [ ] **Version number location.** `support.html` tells users the version is "on
+      the app's settings screen." Point them wherever it actually is.
+- [ ] **Hammer catalog count.** `index.html` claims more than 250 hammers. Check
+      the shipped number.
+- [ ] **Support email route exists.** All three pages print
       `piledrivingapp@tallietales.com`. This address must be created as a route in
       Cloudflare → Email → Email Routing; renaming it on the site does not create
       the mailbox. Until that route exists, mail to it bounces — including
       Apple's verification.
-- [ ] **Email actually works.** Send yourself a test message to the support address and
-      confirm it arrives before you submit.
+- [ ] **Email actually works.** Send a test message to that address and confirm it
+      arrives before you submit.
 
 ---
 
