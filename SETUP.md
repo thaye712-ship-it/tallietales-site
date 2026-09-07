@@ -89,7 +89,7 @@ visitors get a security warning — with the site otherwise appearing to work.
 Click each record's cloud icon until it reads **DNS only** and is grey.
 
 **Do not delete the MX or TXT records.** Cloudflare Email Routing uses them to
-deliver `support@tallietales.com`. Removing them breaks the address Apple uses to
+deliver `piledrivingapp@tallietales.com`. Removing them breaks the address Apple uses to
 verify the organization, and that address is printed on all three pages. You are
 only adding records here, not clearing existing ones.
 
@@ -106,7 +106,7 @@ Apple will not accept a Gmail address for **organization** enrollment. You need
 **Option A — Cloudflare Email Routing (simplest, receive-only)**
 
 Cloudflare → your domain → **Email** → Email Routing → enable. Create a rule forwarding
-`support@tallietales.com` to your Gmail. Everything lands in your normal inbox. The catch
+`piledrivingapp@tallietales.com` to your Gmail. Everything lands in your normal inbox. The catch
 is your replies go out from your Gmail address.
 
 Good enough for Apple's verification and for a low-volume support inbox.
@@ -114,7 +114,7 @@ Good enough for Apple's verification and for a low-volume support inbox.
 **Option B — Zoho Mail free plan (a real mailbox)**
 
 Free for up to 5 users, 5 GB each, one custom domain. You send *and* receive as
-`support@tallietales.com`. Limitation: no IMAP/POP on the free tier, so it works in Zoho's
+`piledrivingapp@tallietales.com`. Limitation: no IMAP/POP on the free tier, so it works in Zoho's
 webmail and Zoho's own mobile app but not in Apple Mail.
 
 Start with A. Move to B if you want replies to look right.
@@ -175,7 +175,7 @@ At **developer.apple.com/programs/enroll**, choose **Company / Organization** an
 - Legal entity name: `Tallie Tales LLC` (exactly as on your formation documents)
 - D-U-N-S number: from Step 1
 - Website: `https://tallietales.com`
-- Work email: `support@tallietales.com` (or another address at your domain)
+- Work email: `piledrivingapp@tallietales.com` (or another address at your domain)
 - Confirmation that you have authority to bind the LLC to agreements
 
 Apple verifies by phone using the number attached to your D&B record — make sure that
@@ -211,8 +211,11 @@ Check each one against the finished app:
       iOS share sheet. If v1 has no export, remove those lines.
 - [ ] **Version number location.** `support.html` tells users the version is "on the app's
       settings screen." Point them wherever it actually is.
-- [ ] **Support email** — the files use `support@tallietales.com`. If you use a different
-      address, find and replace it in all three files.
+- [ ] **Support email route exists.** All three pages now print
+      `piledrivingapp@tallietales.com`. This address must be created as a route in
+      Cloudflare → Email → Email Routing; renaming it on the site does not create
+      the mailbox. Until that route exists, mail to it bounces — including
+      Apple's verification.
 - [ ] **Email actually works.** Send yourself a test message to the support address and
       confirm it arrives before you submit.
 

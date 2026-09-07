@@ -1,0 +1,246 @@
+/* ==========================================================================
+   Tallie Tales LLC — shared stylesheet
+   Plain CSS, no build step. Loaded by index.html, support.html, privacy.html.
+   Colours live in the custom properties below; change them once here and all
+   three pages follow.
+   ========================================================================== */
+
+:root{
+  --bg:#fffdfa;
+  --bg-tint:#fdf4e9;
+  --panel:#fff8f0;
+  --ink:#1d1b18;
+  --muted:#6a625a;
+  --line:#efe4d6;
+  --accent:#c25e00;
+  --accent-soft:#ffe7cd;
+  --accent-ink:#ffffff;
+  --shadow:0 1px 2px rgba(60,40,20,.05), 0 8px 24px rgba(60,40,20,.06);
+  --shadow-lift:0 2px 4px rgba(60,40,20,.07), 0 14px 34px rgba(60,40,20,.11);
+  --radius:14px;
+  --ease:cubic-bezier(.22,.68,.36,1);
+}
+
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#16130f;
+    --bg-tint:#1c1812;
+    --panel:#211c15;
+    --ink:#f3eee7;
+    --muted:#aaa093;
+    --line:#332b22;
+    --accent:#ff9d45;
+    --accent-soft:#3b2716;
+    --accent-ink:#16130f;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.32);
+    --shadow-lift:0 2px 4px rgba(0,0,0,.45), 0 14px 34px rgba(0,0,0,.42);
+  }
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+
+img{max-width:100%;height:auto}
+
+.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+
+/* --- Header --------------------------------------------------------------- */
+
+header{
+  border-bottom:1px solid var(--line);
+  padding:20px 0;
+  background:var(--bg);
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+.brand{
+  font-weight:700;letter-spacing:-.01em;text-decoration:none;
+  color:var(--ink);font-size:17px;
+  display:inline-flex;align-items:center;gap:9px;
+}
+
+.brand:hover .brand-mark{transform:translateY(-2px) rotate(-6deg)}
+
+.brand-mark{
+  width:22px;height:22px;flex:none;
+  color:var(--accent);
+  transition:transform .35s var(--ease);
+}
+
+nav{display:flex;gap:4px}
+
+nav a{
+  color:var(--muted);text-decoration:none;font-size:15px;
+  padding:6px 10px;border-radius:8px;position:relative;
+  transition:color .2s var(--ease), background-color .2s var(--ease);
+}
+
+nav a:hover{color:var(--accent);background:var(--accent-soft)}
+
+nav a[aria-current="page"]{color:var(--ink);font-weight:600}
+
+nav a[aria-current="page"]::after{
+  content:"";position:absolute;left:10px;right:10px;bottom:1px;height:2px;
+  background:var(--accent);border-radius:2px;
+}
+
+/* --- Layout --------------------------------------------------------------- */
+
+main{padding:56px 0 72px}
+
+h1{font-size:clamp(30px,6vw,38px);line-height:1.15;letter-spacing:-.025em;margin:0 0 14px}
+h2{font-size:21px;letter-spacing:-.01em;margin:48px 0 14px}
+h3{font-size:16px;margin:26px 0 6px}
+
+.lede{font-size:18px;color:var(--muted);margin:0 0 32px}
+p{margin:0 0 16px}
+ul,ol{margin:0 0 16px;padding-left:22px}
+li{margin:0 0 8px}
+
+a{color:var(--accent)}
+a:hover{text-decoration:none}
+
+.date{color:var(--muted);margin:0 0 32px;font-size:15px}
+.email{font-size:19px;font-weight:600}
+
+/* --- Cards ---------------------------------------------------------------- */
+
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:20px 22px;margin:0 0 16px;
+  box-shadow:var(--shadow);
+  transition:transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+
+.card p:last-child{margin-bottom:0}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lift)}
+
+.tag{
+  display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--accent-ink);background:var(--accent);
+  padding:5px 12px;border-radius:999px;margin-bottom:18px;
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+
+.hero{
+  position:relative;
+  border-radius:20px;
+  background:linear-gradient(160deg,var(--bg-tint),transparent 70%);
+  padding:28px 26px 4px;
+  margin:0 -26px 8px;
+}
+
+.hero-art{
+  display:block;width:100%;max-width:340px;height:auto;
+  margin:20px auto 24px;
+}
+
+/* --- Feature list --------------------------------------------------------- */
+
+.features{list-style:none;margin:0 0 8px;padding:0}
+
+.features li{
+  display:flex;gap:14px;align-items:flex-start;
+  padding:13px 0;border-bottom:1px solid var(--line);margin:0;
+}
+
+.features li:last-child{border-bottom:0}
+
+.features .icon{
+  width:34px;height:34px;flex:none;border-radius:10px;
+  background:var(--accent-soft);color:var(--accent);
+  display:grid;place-items:center;
+  transition:transform .3s var(--ease);
+}
+
+.features li:hover .icon{transform:scale(1.09) rotate(-4deg)}
+.features .icon svg{width:19px;height:19px}
+
+/* --- Buttons -------------------------------------------------------------- */
+
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:var(--accent-ink);
+  text-decoration:none;font-weight:600;font-size:15px;
+  padding:11px 20px;border-radius:999px;
+  box-shadow:var(--shadow);
+  transition:transform .2s var(--ease), box-shadow .2s var(--ease), filter .2s var(--ease);
+}
+
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lift);filter:brightness(1.06)}
+.btn:active{transform:translateY(0)}
+
+/* --- Footer --------------------------------------------------------------- */
+
+footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:14px}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--accent);text-decoration:underline}
+.fnav{display:flex;gap:20px;flex-wrap:wrap;margin:0 0 10px}
+
+/* --- Scroll reveal -------------------------------------------------------- */
+/* Only applies once site.js adds .js to <html>, so with JavaScript disabled
+   every section renders normally instead of staying invisible. */
+
+.js .reveal{opacity:0;transform:translateY(18px)}
+
+.js .reveal.in{
+  opacity:1;transform:none;
+  transition:opacity .55s var(--ease), transform .55s var(--ease);
+}
+
+/* --- Pile driver animation ------------------------------------------------ */
+
+.ram{animation:ram 1.9s var(--ease) infinite}
+.ring{transform-box:fill-box;transform-origin:center;animation:ring 1.9s linear infinite;opacity:0}
+.spark{transform-box:fill-box;transform-origin:center;animation:spark 1.9s linear infinite;opacity:0}
+
+@keyframes ram{
+  0%   {transform:translateY(0)}
+  38%  {transform:translateY(44px)}
+  46%  {transform:translateY(39px)}
+  54%  {transform:translateY(42px)}
+  100% {transform:translateY(0)}
+}
+
+@keyframes ring{
+  0%,36%  {opacity:0;transform:scale(.35)}
+  40%     {opacity:.85;transform:scale(.6)}
+  72%     {opacity:0;transform:scale(1.75)}
+  100%    {opacity:0}
+}
+
+@keyframes spark{
+  0%,36% {opacity:0}
+  41%    {opacity:1}
+  60%    {opacity:0}
+  100%   {opacity:0}
+}
+
+/* --- Respect reduced motion ---------------------------------------------- */
+/* Everything above is decorative. If the visitor asks for less motion, stop
+   all of it and show content in its final state. */
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+  }
+  .js .reveal{opacity:1;transform:none}
+  .ring,.spark{opacity:0}
+  .ram{transform:translateY(44px)}
+}
