@@ -1,6 +1,6 @@
 # Tallie Tales LLC — website
 
-The public website for Tallie Tales LLC and its iPhone app, **Drive Log**.
+The public website for Tallie Tales LLC and its iPhone and iPad app, **Drive Log**.
 
 Static HTML and CSS — no framework, no build step, no dependencies, nothing to
 install. GitHub Pages serves the files exactly as they are.
@@ -35,6 +35,12 @@ python3 -m http.server 8000
   palette is defined in the same file and follows the visitor's system setting.
 - **The contact address** is `piledrivingapp@tallietales.com`, written into all
   three pages. Changing it means find-and-replace across those three files.
+- **What the pages promise must match the app.** The feature list says *what* the
+  app does, not *how* the blow counting works. Pricing on `index.html` and
+  `support.html` matches App Store Connect and `docs/pricing-and-export-limits.md`
+  in `Pile-Log-app` ($49.99 app with 5 exports a month; Pro $14.99/mo, $119.99/yr,
+  $44.99 first year); the promoter package is in `docs/promoters-and-referrals.md`
+  there. The version number location is Setup tab → Device → Version.
 - To add a page, copy `support.html`, replace the content, and add a link to the
   `<nav>` and the footer of the other pages.
 

@@ -13,10 +13,10 @@ No coding required. Total cost: **$99/yr Apple + about $10–12/yr for a domain.
 | 2. Domain (`tallietales.com`) | **Done** — registered |
 | 3. Email at the domain | **Done** |
 | 4. Site written and committed | **Done** — three pages, public repo |
-| 4a. DNS records pointing at GitHub | **Not started** ← *next action* |
-| 4b. GitHub Pages switched on | **Not started** ← *next action, 2 minutes* |
-| 4c. Custom domain + HTTPS | Blocked by 4a and 4b |
-| 5. Apple enrollment | Blocked by Step 1 (D-U-N-S) and 4c |
+| 4a. DNS records pointing at GitHub | Confirm in Cloudflare (see Step 2) |
+| 4b. GitHub Pages switched on | **Done** — serves branch `live-website` |
+| 4c. Custom domain + HTTPS | Confirm at Settings → Pages: domain check passes, *Enforce HTTPS* ticked |
+| 5. Apple enrollment | Blocked by Step 1 (D-U-N-S) |
 | 6. App Store Connect URLs | Needs the finished app |
 
 The only things in your hands right now are 4a and 4b — set the DNS records and
@@ -127,13 +127,14 @@ Start with A. Move to B if you want replies to look right.
 public, and `index.html`, `support.html`, and `privacy.html` are committed to it.
 You do not need to create a repo or drag files in.
 
-What is left is switching Pages on:
+GitHub Pages is switched on and serves the **`live-website`** branch:
 
-1. Go to **github.com/thaye712-ship-it/tallietales-site** → **Settings** (top of
-   the repo) → **Pages** (left sidebar).
-2. Under *Source*, choose **Deploy from a branch**.
-3. Branch: **`claude/basic-website-b4flaw`** — this is the repository's default
-   branch, and the one holding the site files. Folder: **`/ (root)`** → **Save**.
+1. **github.com/thaye712-ship-it/tallietales-site** → **Settings** → **Pages**.
+2. Source: **Deploy from a branch**. Branch: **`live-website`**, folder
+   **`/ (root)`**. Whatever is on that branch is the public site; nothing on any
+   other branch is visible to anyone.
+3. To publish a change: merge it into `live-website` (or edit the file on that
+   branch directly on github.com and commit).
 4. Wait 1–2 minutes. The site is live at:
 
    ```
@@ -157,11 +158,11 @@ https://tallietales.com/support.html
 https://tallietales.com/privacy.html
 ```
 
-> **A note on the branch name.** `claude/basic-website-b4flaw` is an odd name for
-> a permanent site, but it is only ever visible in repository settings — never in
-> a URL or to a visitor. Renaming it to `main` is optional tidying; if you do
-> rename it, change the branch in Settings → Pages to match or the site will go
-> offline.
+> **Branch history.** The site was first published from `claude/basic-website-b4flaw`,
+> the branch the first session happened to create. `live-website` was created from the
+> same history on 2026-09-09 so the name says what it is. The old branch is kept only
+> until Settings → Pages has been switched to `live-website`; after that it can be
+> deleted.
 
 **To change anything later:** open the file on github.com, click the pencil icon,
 edit, and click Commit. The live site updates in about a minute.
@@ -214,8 +215,14 @@ these against the finished build:
 - [ ] **Beta forms.** `support.html` says agency forms other than UDOT and Plain
       are marked beta in the picker. Make sure the app actually marks them that
       way, or reword the page.
-- [ ] **Version number location.** `support.html` tells users the version is "on
-      the app's settings screen." Point them wherever it actually is.
+- [ ] **Version number location.** `support.html` says Setup tab → Device → Version.
+- [ ] **Pricing.** `index.html` and `support.html` state $49.99 for the app with 5
+      pile exports a month, and Pro at $14.99/mo or $119.99/yr with a $44.99 first
+      year. These must match the App Store Connect price tier, the subscription
+      products and the introductory offer, and the app's own paywall.
+- [ ] **Promoter discount.** Both pages invite promoters to email for a discount;
+      the package itself (a promo code plus an offer code) only exists once the
+      app is live and the codes are generated in App Store Connect.
 - [ ] **Hammer catalog count.** `index.html` claims more than 250 hammers. Check
       the shipped number.
 - [ ] **Support email route exists.** All three pages print
