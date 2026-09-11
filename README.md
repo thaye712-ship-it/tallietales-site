@@ -14,6 +14,7 @@ install. GitHub Pages serves the files exactly as they are.
 | `privacy.html` | Privacy policy           | App Store **Privacy Policy URL**      |
 | `style.css`    | All styling, shared      | Colours, layout, animation            |
 | `site.js`      | Scroll reveal + counter  | Optional polish only                  |
+| `img/`         | The app icon at 512, 180, 64 and 32 px | Header mark, hero, favicon, home-screen icon |
 
 `SETUP.md` is the deployment walkthrough: DNS, GitHub Pages, Apple enrollment,
 and the App Store Connect fields. It also tracks what is done and what is not.
@@ -41,6 +42,9 @@ python3 -m http.server 8000
   in `Pile-Log-app` ($49.99 app with 5 exports a month; Pro $14.99/mo, $119.99/yr,
   $44.99 first year); the promoter package is in `docs/promoters-and-referrals.md`
   there. The version number location is Setup tab → Device → Version.
+- **The app icon** in `img/` is rendered from `Pile-Log-app/design/app-icon.html`
+  (the same artwork as the App Store icon), with the iOS corner radius applied.
+  When the icon changes, regenerate all four sizes from the new 1024 px PNG.
 - To add a page, copy `support.html`, replace the content, and add a link to the
   `<nav>` and the footer of the other pages.
 

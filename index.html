@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tallie Tales LLC — Drive Log for pile driving</title>
 <meta name="description" content="Drive Log is an iPhone and iPad app from Tallie Tales LLC that listens to the pile hammer, counts every blow automatically, shows stroke live, checks driving criteria, and prints the finished state DOT pile driving log.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/app-icon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="img/app-icon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/app-icon-180.png">
 <link rel="stylesheet" href="style.css">
 <script src="site.js" defer></script>
 </head>
@@ -13,10 +16,7 @@
 <header>
   <div class="wrap">
     <a class="brand" href="index.html">
-      <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <rect x="7" y="2" width="10" height="6" rx="1.5"></rect>
-        <path d="M12 10v11M8 21h8"></path>
-      </svg>
+      <img class="brand-mark" src="img/app-icon-64.png" width="22" height="22" alt="">
       Tallie Tales LLC
     </a>
     <nav>
@@ -31,7 +31,10 @@
   <div class="wrap">
     <section class="hero reveal">
     <span class="tag">iPhone &amp; iPad app</span>
-    <h1>Drive Log</h1>
+    <div class="title-row">
+      <img class="app-icon" src="img/app-icon-180.png" width="72" height="72" alt="Drive Log app icon">
+      <h1>Drive Log</h1>
+    </div>
     <p class="lede">A field tool that listens to the hammer, counts the blows, and hands you the state DOT pile driving log — built for the person standing at the rig with a clipboard.</p>
 
       <svg class="hero-art" viewBox="0 0 300 210" aria-hidden="true">
@@ -99,7 +102,7 @@
       <li>Driving criteria set once per substructure — blows per foot, minimum stroke, penetration or tip elevation — and a clear <strong>meets / does not meet</strong> verdict on every pile that updates if the criteria change</li>
       <li>Initial drive, redrives and restrikes on one log; splices, pile runs, fuel-setting changes, depth corrections and notes stamped where they happened</li>
       <li>An editable drive log — fix a blow count or an ending depth on the phone, and the record keeps both the original and the correction. Nothing is ever silently overwritten</li>
-      <li>Job info for the whole form: engineers, contractors, cushion, weather and the rest, entered once and printed on every pile</li>
+      <li>Job info for the whole form: engineers, contractors, cushion and the rest, entered once and printed on every pile. Weather and temperature are chosen per pile, because they change</li>
     </ul>
     </section>
 
@@ -107,7 +110,7 @@
     <h2>The forms</h2>
     <p>Every pile exports as a PDF and as an Excel workbook on the agency's own layout — measured off the blank form, with the header, the foot-by-foot table and the notes where the form puts them. Export a structure or a whole project and the workbook comes out with one tab per pile.</p>
     <div class="card">
-      <p><strong>UDOT</strong> Pile Driving Record, plus <strong>FDOT</strong> 700-010-60, <strong>NCDOT</strong>, <strong>SCDOT</strong> 700.15, <strong>VDOT</strong>, <strong>GDOT</strong>, <strong>TDOT</strong>, <strong>LADOTD</strong> Log of Pile Driving and <strong>WSDOT</strong> 450-004A, and a plain record for any other owner. Send files anywhere the iOS share sheet goes — email, Files, AirDrop. More states are coming; ask for yours.</p>
+      <p><strong>FDOT</strong> 700-010-60, <strong>GDOT</strong>, <strong>LADOTD</strong> Log of Pile Driving, <strong>NCDOT</strong>, <strong>SCDOT</strong> 700.15, <strong>TDOT</strong>, <strong>UDOT</strong> Pile Driving Record, <strong>VDOT</strong> and <strong>WSDOT</strong> 450-004A, plus a plain record for any other owner. Send files anywhere the iOS share sheet goes — email, Files, AirDrop. More states are coming; ask for yours.</p>
     </div>
     </section>
 

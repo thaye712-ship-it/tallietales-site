@@ -212,9 +212,9 @@ these against the finished build:
       audio is analysed on device and never stored or transmitted. If any
       analytics, crash reporter, or audio upload is ever added, both the App
       Privacy label and `privacy.html` must change together.
-- [ ] **Beta forms.** `support.html` says agency forms other than UDOT and Plain
-      are marked beta in the picker. Make sure the app actually marks them that
-      way, or reword the page.
+- [ ] **Beta forms.** `support.html` says every agency form is marked beta in the
+      picker and only Plain is not. Make sure the app still marks them that way,
+      or reword the page.
 - [ ] **Version number location.** `support.html` says Setup tab → Device → Version.
 - [ ] **Pricing.** `index.html` and `support.html` state $49.99 for the app with 5
       pile exports a month, and Pro at $14.99/mo or $119.99/yr with a $44.99 first

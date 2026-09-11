@@ -74,8 +74,16 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 
 .brand-mark{
   width:22px;height:22px;flex:none;
-  color:var(--accent);
+  border-radius:5px;
   transition:transform .35s var(--ease);
+}
+
+.title-row{display:flex;align-items:center;gap:16px;margin:0 0 14px}
+.title-row h1{margin:0}
+.app-icon{
+  width:72px;height:72px;flex:none;
+  border-radius:16px;
+  box-shadow:var(--shadow);
 }
 
 nav{display:flex;gap:4px}
