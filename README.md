@@ -35,20 +35,26 @@ python3 -m http.server 8000
 - **Colours, spacing, fonts** are CSS custom properties at the top of
   `style.css`. Change them once there and all three pages follow. A dark-mode
   palette is defined in the same file and follows the visitor's system setting.
-- **The contact address** is `piledrivingapp@tallietales.com`, written into all
-  three pages. Changing it means find-and-replace across those three files.
+- **The contact addresses** are `piledrivingapp@tallietales.com` and
+  `piledrivingapp@gmail.com`, both written into all three pages. Changing either
+  means find-and-replace across those three files.
 - **What the pages promise must match the app.** The feature list says *what* the
   app does, not *how* the blow counting works. `Pile-app-Android-/docs/WEBSITE.md`
   is the source of facts for this site — what may be claimed and what may not.
-- **Pricing is one set of numbers on both platforms** (owner, 2026-09-23): free to
-  record; 5 pile exports a calendar month free; $49.99/year for unlimited; launch
-  offer of a free month then $9.99 for the first year. It is stated on `index.html`
-  and `support.html` and must match `Pile-app-Android-/docs/PRICING.md`, the Play
-  Console products, and App Store Connect when iOS lists. A site that disagrees
-  with the store's own products is a rejection.
+- **Pricing is one set of numbers on both platforms** (owner, 2026-09-23): the app
+  is a **$49.99 one-time purchase**, **$9.99 introductory**, including 5 pile exports
+  a calendar month; **Pro** adds unlimited exports at **$14.99/month or $119.99/year**,
+  intro being a free first month then **$44.99 for the first year**. Android moved to
+  match iOS, so `Pile-app-Android-/docs/PRICING.md` (a $49.99/year subscription with a
+  free tier) is now **out of date** and the Android billing code with it. The numbers
+  on `index.html` and `support.html` must match the Play Console products and App Store
+  Connect; a site that disagrees with the store's own products is a rejection.
 - **Feedback earns a discount code.** Both pages offer one for field feedback we can
-  act on. The codes themselves are generated in the Play Console (promo codes) and
-  in App Store Connect (offer codes); nothing on the site issues them.
+  act on, and deliberately do not say how the code is delivered — that is handled
+  directly with the owner and is not settled yet. Do not add redemption mechanics to
+  the site until it is.
+- **Two addresses, one inbox.** `piledrivingapp@tallietales.com` and
+  `piledrivingapp@gmail.com` are both printed on all three pages.
 - **The app icon** in `img/` is rendered from `Pile-Log-app/design/app-icon.html`
   (the same artwork as the App Store icon), with the iOS corner radius applied.
   When the icon changes, regenerate all four sizes from the new 1024 px PNG.

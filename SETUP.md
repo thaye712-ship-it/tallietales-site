@@ -219,12 +219,20 @@ these against the finished build:
 - [ ] **Version number location.** `support.html` says Settings tab → Device on
       Android, and Setup tab → Device → Version on iPhone.
 - [ ] **Pricing.** `index.html` and `support.html` state one set of numbers for both
-      platforms: free to record, 5 pile exports a calendar month free, $49.99/year
-      for unlimited, launch offer of a free month then $9.99 the first year. These
-      must match `Pile-app-Android-/docs/PRICING.md`, the Play Console subscription
-      and its offers, App Store Connect when iOS lists, and the app's own paywall.
-      **The iPhone app is priced this way too now** — the old one-time $49.99 plus
-      a Pro subscription is gone from the site and has to go from the app.
+      platforms: the app at **$49.99 one-time, $9.99 introductory**, including 5 pile
+      exports a calendar month; **Pro** unlimited at **$14.99/mo or $119.99/yr**, intro
+      a free first month then **$44.99 the first year**. These must match App Store
+      Connect's price tier, subscription products and introductory offers, the Play
+      Console's equivalents, and each app's own paywall.
+- [ ] **Android has to move to this model.** `Pile-app-Android-/docs/PRICING.md` and
+      `core/billing/` still implement the old plan — free install, free tier, a
+      $49.99/year subscription. The site now says Android is a paid app with a Pro
+      subscription on top. Until the app and the Play Console agree with the site,
+      the site is wrong. Note that a **paid** app changes what "join the open test"
+      means on Play, and both pages currently invite people to join it.
+- [ ] **"A pile is charged once, ever" must be true on both.** Android implements it
+      (Build 20). Confirm iOS does, or take that sentence off `index.html` and
+      `support.html`.
 - [ ] **Billing is disclosed.** `privacy.html` §3b says Play Billing is the one
       third-party component and the one piece of networking. If that stops being
       true in either direction, the page, the Play Data Safety form and the App
