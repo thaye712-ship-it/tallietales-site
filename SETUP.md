@@ -220,10 +220,15 @@ these against the finished build:
       Android, and Setup tab → Device → Version on iPhone.
 - [ ] **Pricing.** `index.html` and `support.html` state one set of numbers for both
       platforms: the app at **$49.99 one-time, $9.99 introductory**, including 5 pile
-      exports a calendar month; **Pro** unlimited at **$14.99/mo or $119.99/yr**, intro
-      a free first month then **$44.99 the first year**. These must match App Store
+      exports a calendar month **and a free month of Pro**; **Pro** unlimited at
+      **$14.99/mo or $119.99/yr**, **$44.99 the first year**. These must match App Store
       Connect's price tier, subscription products and introductory offers, the Play
       Console's equivalents, and each app's own paywall.
+- [ ] **The free month is the app's, not the store's** (owner, 2026-09-23). Both pages
+      say it needs no subscription to start and nothing to cancel. That makes it app
+      logic, not a store introductory offer — the app grants it on purchase and expires
+      it itself. Do not *also* configure a free-trial phase on the subscription, or a
+      buyer gets two free months and both pages are wrong.
 - [ ] **Android has to move to this model.** `Pile-app-Android-/docs/PRICING.md` and
       `core/billing/` still implement the old plan — free install, free tier, a
       $49.99/year subscription. The site now says Android is a paid app with a Pro

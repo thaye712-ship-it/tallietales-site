@@ -43,8 +43,9 @@ python3 -m http.server 8000
   is the source of facts for this site — what may be claimed and what may not.
 - **Pricing is one set of numbers on both platforms** (owner, 2026-09-23): the app
   is a **$49.99 one-time purchase**, **$9.99 introductory**, including 5 pile exports
-  a calendar month; **Pro** adds unlimited exports at **$14.99/month or $119.99/year**,
-  intro being a free first month then **$44.99 for the first year**. Android moved to
+  a calendar month **and a free month of Pro that needs no subscription to start**;
+  **Pro** adds unlimited exports at **$14.99/month or $119.99/year**, **$44.99 for the
+  first year**. Both pages state it as a table. Android moved to
   match iOS, so `Pile-app-Android-/docs/PRICING.md` (a $49.99/year subscription with a
   free tier) is now **out of date** and the Android billing code with it. The numbers
   on `index.html` and `support.html` must match the Play Console products and App Store
@@ -53,8 +54,9 @@ python3 -m http.server 8000
   act on, and deliberately do not say how the code is delivered — that is handled
   directly with the owner and is not settled yet. Do not add redemption mechanics to
   the site until it is.
-- **Two addresses, one inbox.** `piledrivingapp@tallietales.com` and
-  `piledrivingapp@gmail.com` are both printed on all three pages.
+- **Two addresses.** `piledrivingapp@tallietales.com` and `piledrivingapp@gmail.com`
+  are both printed on all three pages. They reach the same inbox, but the site does
+  not say so (owner, 2026-09-23) — just list them.
 - **The app icon** in `img/` is rendered from `Pile-Log-app/design/app-icon.html`
   (the same artwork as the App Store icon), with the iOS corner radius applied.
   When the icon changes, regenerate all four sizes from the new 1024 px PNG.

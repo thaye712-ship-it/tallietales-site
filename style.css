@@ -212,6 +212,26 @@ main ul li:hover::before{transform:rotate(45deg) scale(1.25)}
    rather than relying on the space between inline elements. */
 .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 16px}
 
+/* --- Price table ---------------------------------------------------------- */
+/* Two columns on a desktop; on a phone each row becomes a stacked pair, because
+   a price squeezed into half of 390px wraps mid-figure. */
+.prices{width:100%;border-collapse:collapse;margin:0 0 10px}
+.prices th,.prices td{
+  text-align:left;vertical-align:top;padding:13px 14px;
+  border-bottom:1px solid var(--line);font-size:15px;line-height:1.5;
+}
+.prices tr:last-child th,.prices tr:last-child td{border-bottom:0}
+.prices th{font-weight:600;width:45%}
+.prices td{color:var(--muted)}
+.prices strong{color:var(--ink)}
+@media (max-width:560px){
+  .prices th,.prices td{display:block;width:auto;padding:0 0 4px}
+  .prices th{padding-top:14px}
+  .prices td{padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .prices th{border-bottom:0}
+}
+.fineprint{font-size:14px;color:var(--muted);margin:0 0 16px}
+
 /* --- Footer --------------------------------------------------------------- */
 
 footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:14px}
