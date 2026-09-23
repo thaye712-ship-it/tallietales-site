@@ -200,6 +200,18 @@ main ul li:hover::before{transform:rotate(45deg) scale(1.25)}
 .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lift);filter:brightness(1.06)}
 .btn:active{transform:translateY(0)}
 
+/* A second, quieter action beside the primary one — same shape, no fill, so the
+   Play link stays the obvious thing to press. */
+.btn-quiet{
+  background:transparent;color:var(--ink);
+  box-shadow:inset 0 0 0 1.5px var(--line);
+}
+.btn-quiet:hover{box-shadow:inset 0 0 0 1.5px var(--accent);color:var(--accent)}
+
+/* Buttons wrap onto their own lines on a phone, so the row carries the gap
+   rather than relying on the space between inline elements. */
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 16px}
+
 /* --- Footer --------------------------------------------------------------- */
 
 footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:14px}

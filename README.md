@@ -1,6 +1,7 @@
 # Tallie Tales LLC — website
 
-The public website for Tallie Tales LLC and its iPhone and iPad app, **Drive Log**.
+The public website for Tallie Tales LLC and its app, **Pile Boss** — in open testing
+on Google Play, and coming to iPhone and iPad once Apple enrollment clears.
 
 Static HTML and CSS — no framework, no build step, no dependencies, nothing to
 install. GitHub Pages serves the files exactly as they are.
@@ -10,8 +11,8 @@ install. GitHub Pages serves the files exactly as they are.
 | File           | Serves as                | Used for                              |
 | -------------- | ------------------------ | ------------------------------------- |
 | `index.html`   | Company + product home   | Apple Organization enrollment website |
-| `support.html` | Drive Log support & FAQ  | App Store **Support URL**             |
-| `privacy.html` | Privacy policy           | App Store **Privacy Policy URL**      |
+| `support.html` | Pile Boss support & FAQ  | Store **Support URL** (Play and App Store) |
+| `privacy.html` | Privacy policy           | Store **Privacy Policy URL** — required by Play |
 | `style.css`    | All styling, shared      | Colours, layout, animation            |
 | `site.js`      | Scroll reveal + counter  | Optional polish only                  |
 | `img/`         | The app icon at 512, 180, 64 and 32 px | Header mark, hero, favicon, home-screen icon |
@@ -37,11 +38,17 @@ python3 -m http.server 8000
 - **The contact address** is `piledrivingapp@tallietales.com`, written into all
   three pages. Changing it means find-and-replace across those three files.
 - **What the pages promise must match the app.** The feature list says *what* the
-  app does, not *how* the blow counting works. Pricing on `index.html` and
-  `support.html` matches App Store Connect and `docs/pricing-and-export-limits.md`
-  in `Pile-Log-app` ($49.99 app with 5 exports a month; Pro $14.99/mo, $119.99/yr,
-  $44.99 first year); the promoter package is in `docs/promoters-and-referrals.md`
-  there. The version number location is Setup tab → Device → Version.
+  app does, not *how* the blow counting works. `Pile-app-Android-/docs/WEBSITE.md`
+  is the source of facts for this site — what may be claimed and what may not.
+- **Pricing is one set of numbers on both platforms** (owner, 2026-09-23): free to
+  record; 5 pile exports a calendar month free; $49.99/year for unlimited; launch
+  offer of a free month then $9.99 for the first year. It is stated on `index.html`
+  and `support.html` and must match `Pile-app-Android-/docs/PRICING.md`, the Play
+  Console products, and App Store Connect when iOS lists. A site that disagrees
+  with the store's own products is a rejection.
+- **Feedback earns a discount code.** Both pages offer one for field feedback we can
+  act on. The codes themselves are generated in the Play Console (promo codes) and
+  in App Store Connect (offer codes); nothing on the site issues them.
 - **The app icon** in `img/` is rendered from `Pile-Log-app/design/app-icon.html`
   (the same artwork as the App Store icon), with the iOS corner radius applied.
   When the icon changes, regenerate all four sizes from the new 1024 px PNG.

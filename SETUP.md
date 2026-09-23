@@ -18,6 +18,7 @@ No coding required. Total cost: **$99/yr Apple + about $10–12/yr for a domain.
 | 4c. Custom domain + HTTPS | Confirm at Settings → Pages: domain check passes, *Enforce HTTPS* ticked |
 | 5. Apple enrollment | Blocked by Step 1 (D-U-N-S) |
 | 6. App Store Connect URLs | Needs the finished app |
+| 7. Google Play listing | **Live** — open testing; the site is its privacy and support URL |
 
 The only things in your hands right now are 4a and 4b — set the DNS records and
 switch Pages on. Everything after that is waiting: DNS propagation, then the HTTPS
@@ -215,14 +216,28 @@ these against the finished build:
 - [ ] **Beta forms.** `support.html` says every agency form is marked beta in the
       picker and only Plain is not. Make sure the app still marks them that way,
       or reword the page.
-- [ ] **Version number location.** `support.html` says Setup tab → Device → Version.
-- [ ] **Pricing.** `index.html` and `support.html` state $49.99 for the app with 5
-      pile exports a month, and Pro at $14.99/mo or $119.99/yr with a $44.99 first
-      year. These must match the App Store Connect price tier, the subscription
-      products and the introductory offer, and the app's own paywall.
-- [ ] **Promoter discount.** Both pages invite promoters to email for a discount;
-      the package itself (a promo code plus an offer code) only exists once the
-      app is live and the codes are generated in App Store Connect.
+- [ ] **Version number location.** `support.html` says Settings tab → Device on
+      Android, and Setup tab → Device → Version on iPhone.
+- [ ] **Pricing.** `index.html` and `support.html` state one set of numbers for both
+      platforms: free to record, 5 pile exports a calendar month free, $49.99/year
+      for unlimited, launch offer of a free month then $9.99 the first year. These
+      must match `Pile-app-Android-/docs/PRICING.md`, the Play Console subscription
+      and its offers, App Store Connect when iOS lists, and the app's own paywall.
+      **The iPhone app is priced this way too now** — the old one-time $49.99 plus
+      a Pro subscription is gone from the site and has to go from the app.
+- [ ] **Billing is disclosed.** `privacy.html` §3b says Play Billing is the one
+      third-party component and the one piece of networking. If that stops being
+      true in either direction, the page, the Play Data Safety form and the App
+      Privacy label change together.
+- [ ] **Feedback discount.** Both pages promise a discount code for field feedback
+      we can act on. The codes exist only once they are generated — promo codes in
+      the Play Console, offer codes in App Store Connect. Have a few ready before
+      the offer is live, or the first reply has nothing to send.
+- [ ] **Promoter discount.** Both pages invite promoters to email for a package;
+      same story — the codes come from the Play Console and App Store Connect.
+- [ ] **The Play link resolves.** `index.html` and `support.html` link to
+      `play.google.com/store/apps/details?id=com.tallietales.drivelogforpiledriving`.
+      Open it signed out and confirm the open test is joinable from it.
 - [ ] **Hammer catalog count.** `index.html` claims more than 250 hammers. Check
       the shipped number.
 - [ ] **Support email route exists.** All three pages print
