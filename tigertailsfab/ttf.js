@@ -68,6 +68,15 @@
     s.appendChild(a);
   });
 
+  if (!email) {
+    var f0 = document.getElementById("ask"), alt = document.getElementById("ask-alt");
+    if (f0) f0.hidden = true;
+    if (alt) alt.hidden = false;
+    var mwb = document.getElementById("ask-mw");
+    if (mwb && d.makerworld) mwb.href = d.makerworld;
+    return;
+  }
+
   var link = document.getElementById("email-link");
   if (link) { link.href = "mailto:" + email; link.textContent = email; }
 

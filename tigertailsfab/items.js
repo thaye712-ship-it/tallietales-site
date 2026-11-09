@@ -14,7 +14,7 @@
   the page goes live.
 */
 window.TTF = {
-  email: "CHANGE-ME@tallietales.com",
+  email: "",       // the address messages go to; leave "" to show a MakerWorld link instead
   makerworld: "https://makerworld.com/en/@TallieTales_Fab/upload",
   youtube: "",      // your YouTube channel link
   instagram: "",    // your Instagram link
