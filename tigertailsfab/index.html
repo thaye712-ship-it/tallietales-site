@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tiger Tails Fab — 3D prints, designs and crochet</title>
+<meta name="description" content="Tiger Tails Fab: 3D printed parts and gifts, original 3D models, and handmade crochet. Printing tips on YouTube and Instagram. Ask us about any item.">
+<link rel="icon" type="image/png" sizes="32x32" href="img/logo-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="img/logo-64.png">
+<link rel="apple-touch-icon" href="img/logo-192.png">
+<meta property="og:title" content="Tiger Tails Fab">
+<meta property="og:description" content="3D prints, original designs and crochet. Ask us about any item.">
+<meta property="og:image" content="https://tallietales.com/tigertailsfab/img/logo-512.png">
+<link rel="stylesheet" href="ttf.css">
+<script src="items.js" defer></script>
+<script src="ttf.js" defer></script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/logo-64.png" width="36" height="36" alt="">Tiger Tails <b>Fab</b></a>
+    <nav>
+      <a href="#prints">Prints</a>
+      <a href="#designs">Designs</a>
+      <a href="#crochet">Crochet</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="kicker">3D printing &middot; original designs &middot; crochet</p>
+        <h1>Made layer by layer in our shop.</h1>
+        <p class="lede">We print, design and crochet things worth having, and share the tips, fails and fixes along the way. See something you like? Send us a note and we'll make it happen.</p>
+        <div class="btns">
+          <a class="btn btn-main" href="#prints">See what we make</a>
+          <a class="btn btn-line" href="#contact">Ask about an item</a>
+        </div>
+        <div class="social" id="social"></div>
+      </div>
+      <div class="hero-art">
+        <img class="logo" src="img/logo-512.png" width="512" height="512" alt="Tiger Tails Fab logo: a tiger in a ball cap">
+      </div>
+    </div>
+    <div class="stripes" aria-hidden="true"></div>
+  </section>
+
+  <section class="band" id="prints">
+    <div class="wrap">
+      <h2><span>01</span> 3D Prints</h2>
+      <p class="sub">Printed parts, gifts and gadgets. Colors and sizes are flexible, so just ask.</p>
+      <div class="grid" data-list="prints"></div>
+    </div>
+  </section>
+
+  <section class="band alt" id="designs">
+    <div class="wrap">
+      <h2><span>02</span> Our Designs</h2>
+      <p class="sub">Models we designed ourselves. Grab the file on MakerWorld and print it, or have us print it for you.</p>
+      <div class="grid" data-list="designs"></div>
+    </div>
+  </section>
+
+  <section class="band" id="crochet">
+    <div class="wrap">
+      <h2><span>03</span> Crochet</h2>
+      <p class="sub">Handmade pieces. More on the way.</p>
+      <div class="grid" data-list="crochet"></div>
+    </div>
+  </section>
+
+  <section class="band shop">
+    <div class="wrap shop-grid">
+      <img src="img/printer.jpg" width="900" height="1200" alt="The Bambu Lab H3C printer in the Tiger Tails shop, with spools loaded on top" loading="lazy">
+      <div>
+        <h2><span>04</span> The Shop</h2>
+        <p>Most of what you see here comes off a Bambu Lab H3C with a multi-spool feeder, so multi-color prints are no problem. We post timelapses, tips and the occasional spaghetti monster on YouTube and Instagram, plus an ongoing snow cat build.</p>
+        <p>Every item here is made when you ask for it. We don't take orders through the site yet: email us, and we'll talk about colors, size, price and timing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band contact" id="contact">
+    <div class="wrap">
+      <h2>Want one?</h2>
+      <p class="sub">Tell us which item, the color and size you're after, and anything custom. We usually reply within a couple of days.</p>
+      <form id="ask" class="ask" novalidate>
+        <label>Your name <input name="name" autocomplete="name" required></label>
+        <label>Which item? <input name="item" id="ask-item" placeholder="e.g. the snow cat model, in black"></label>
+        <label class="full">Message <textarea name="msg" rows="4" placeholder="Color, size, quantity, deadline..."></textarea></label>
+        <button class="btn btn-main full" type="submit">Write the email</button>
+        <p class="fine full">This opens your email app with your message filled in. Or write to us directly at <a id="email-link" href="#"></a>.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><b>Tiger Tails Fab</b> &middot; a Tallie Tales LLC shop</p>
+    <p class="fine">Models from other designers are printed under their licenses. Photos are our own prints.</p>
+  </div>
+</footer>
+
+</body>
+</html>

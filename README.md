@@ -60,3 +60,16 @@ is no image file, no library, and nothing to load.
 
 Both respect `prefers-reduced-motion`. A visitor who has asked their system to
 reduce motion sees the finished state with no movement at all.
+
+## Tiger Tails Fab (`tigertailsfab/`)
+
+A separate showcase for the 3D printing, design and crochet side of the business,
+served at `https://tallietales.com/tigertailsfab/`. It has its own stylesheet
+(`ttf.css`), its own look and menu, and does not link to or from the Pile Boss pages.
+
+- **Items and contact details** live in `tigertailsfab/items.js`. Copy a block to add an
+  item; photos go in `tigertailsfab/img/items/`. Remove every `sample: true` item and
+  set the real `email` before publishing.
+- **Contact** is a mailto form: it opens the visitor's email app with the message filled
+  in. No server, no third-party form service.
+- **QR code** for the page: `tigertailsfab/img/qr-tigertailsfab.png` (and `.svg`).
