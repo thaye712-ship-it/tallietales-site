@@ -15,22 +15,30 @@
 */
 window.TTF = {
   email: "CHANGE-ME@tallietales.com",
-  makerworld: "",   // your MakerWorld profile link
+  makerworld: "https://makerworld.com/en/@TallieTales_Fab/upload",
   youtube: "",      // your YouTube channel link
   instagram: "",    // your Instagram link
 
   prints: [
-    { sample: true, title: "Sample print", blurb: "Printed on the Bambu Lab H3C. Ask about colors and sizes.", photo: "", link: "", tag: "Made to order" },
-    { sample: true, title: "Sample print", blurb: "A second example so you can see the grid.", photo: "", link: "", tag: "Made to order" },
-    { sample: true, title: "Sample print", blurb: "A third example.", photo: "", link: "", tag: "Made to order" }
   ],
 
   designs: [
-    { sample: true, title: "Sample design", blurb: "An original model. Download the file on MakerWorld, or ask us to print it.", photo: "", link: "", tag: "Free file" },
-    { sample: true, title: "Sample design", blurb: "Another example.", photo: "", link: "", tag: "Free file" }
+    {
+      title: "H3C Nozzle (Hotend) Case",
+      blurb: "A sliding-lid case that keeps spare H3C hotends safe and organized, with a pocket for the small parts. Comes in a 5-nozzle tray, a 9-nozzle single row, and a 9-nozzle two-row box.",
+      photo: "h3c-nozzle-case.jpg",
+      link: "https://makerworld.com/en/models/3567232-h3c-nozzle-hotend-case",
+      tag: "Free file"
+    },
+    {
+      title: "Dryer for AMS 3H",
+      blurb: "A vented desiccant box that sits next to the AMS 3H and keeps your filament dry. It has a sliding lid, so swapping desiccant takes seconds.",
+      photo: "ams-3h-dryer.jpg",
+      link: "https://makerworld.com/en/@TallieTales_Fab/upload",
+      tag: "Free file"
+    }
   ],
 
   crochet: [
-    { sample: true, title: "Sample crochet piece", blurb: "Handmade. Ask about colors.", photo: "", link: "", tag: "Handmade" }
   ]
 };
