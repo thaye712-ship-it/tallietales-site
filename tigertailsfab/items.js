@@ -50,6 +50,13 @@ window.TTF = {
       photo: "girl-monkey.jpg",
       link: "https://makerworld.com/en/models/3575087-crochet-amigurumi-eyes",
       tag: "Handmade"
+    },
+    {
+      title: "Flamingo",
+      blurb: "A plush pink flamingo with a curved neck, hot pink legs and a black beak, finished with our 3D printed sleepy eyes.",
+      photo: "flamingo.jpg",
+      link: "https://makerworld.com/en/models/3575087-crochet-amigurumi-eyes",
+      tag: "Handmade"
     }
   ]
 };
