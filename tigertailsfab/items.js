@@ -20,9 +20,6 @@ window.TTF = {
   instagram: "https://www.instagram.com/tiger_tails_fab/",
 
   prints: [
-  ],
-
-  designs: [
     {
       title: "H3C Nozzle (Hotend) Case",
       blurb: "A sliding-lid case that keeps spare H3C hotends safe and organized, with a pocket for the small parts. Comes in a 5-nozzle tray, a 9-nozzle single row, and a 9-nozzle two-row box.",
