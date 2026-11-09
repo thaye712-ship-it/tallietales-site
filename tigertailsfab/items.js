@@ -31,10 +31,10 @@ window.TTF = {
       tag: "Free file"
     },
     {
-      title: "Dryer for AMS 3H",
-      blurb: "A vented desiccant box that sits next to the AMS 3H and keeps your filament dry. It has a sliding lid, so swapping desiccant takes seconds.",
+      title: "H3C AMS 3H Dryer Box",
+      blurb: "A desiccant box that fits to the right of the heater slots in the AMS 3H and holds a lot of desiccant to keep your filament dry. Prints on one plate in PETG.",
       photo: "ams-3h-dryer.jpg",
-      link: "https://makerworld.com/en/@TallieTales_Fab/upload",
+      link: "https://makerworld.com/en/models/3567073-h3c-ams-3h-dryer-box",
       tag: "Free file"
     }
   ],
