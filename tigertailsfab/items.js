@@ -36,9 +36,23 @@ window.TTF = {
       photo: "ams-3h-dryer.jpg",
       link: "https://makerworld.com/en/models/3567073-h3c-ams-3h-dryer-box",
       tag: "Free file"
+    },
+    {
+      title: "Crochet Amigurumi Eyes",
+      blurb: "Embroidering amigurumi eyes is hard, so here is an easy fix: printed sleepy or happy eyes that attach inside the head with yarn or thread through the eyelets. About 27 minutes and 5 g of PLA.",
+      photo: "crochet-amigurumi-eyes.jpg",
+      link: "https://makerworld.com/en/models/3575087-crochet-amigurumi-eyes",
+      tag: "Free file"
     }
   ],
 
   crochet: [
+    {
+      title: "Girl Monkey",
+      blurb: "A soft, chunky pink monkey with a sage muzzle and ears, finished with our 3D printed sleepy eyes with lashes.",
+      photo: "girl-monkey.jpg",
+      link: "https://makerworld.com/en/models/3575087-crochet-amigurumi-eyes",
+      tag: "Handmade"
+    }
   ]
 };
