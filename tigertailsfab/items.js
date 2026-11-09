@@ -16,8 +16,8 @@
 window.TTF = {
   email: "",       // the address messages go to; leave "" to show a MakerWorld link instead
   makerworld: "https://makerworld.com/en/@TallieTales_Fab/upload",
-  youtube: "",      // your YouTube channel link
-  instagram: "",    // your Instagram link
+  youtube: "https://www.youtube.com/@Tiger_Tails_Fab",
+  instagram: "https://www.instagram.com/tiger_tails_fab/",
 
   prints: [
   ],
