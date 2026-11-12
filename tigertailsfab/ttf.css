@@ -41,8 +41,22 @@ a { color: inherit; }
 .top nav a:hover { background: #2a2a2a; }
 .top nav .nav-cta { background: var(--gold); color: #141414; }
 .top nav .nav-cta:hover { background: var(--gold-deep); }
+.top-right { display: flex; align-items: center; gap: 10px; }
+.top-social { display: flex; gap: 2px; padding-right: 8px; border-right: 1px solid #333; }
+.top-social a { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 8px; color: #cfc9b6; }
+.top-social a:hover { color: var(--gold); background: #2a2a2a; }
+.top-social svg { width: 18px; height: 18px; }
 @media (max-width: 640px) {
   .top nav a:not(.nav-cta) { display: none; }
+}
+@media (max-width: 400px) {
+  .top .wrap { padding: 0 14px; gap: 8px; }
+  .brand { font-size: 16px; }
+  .brand img { display: none; }
+  .top-right { gap: 6px; }
+  .top-social { padding-right: 4px; }
+  .top-social a { width: 30px; }
+  .top nav .nav-cta { padding: 8px; }
 }
 
 /* hero */
@@ -67,8 +81,12 @@ a { color: inherit; }
 .btn-line { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn-line:hover { background: var(--ink); color: var(--paper); }
 .btn.sm { padding: 8px 14px; font-size: 14px; }
-.social { display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap; }
-.chip { text-decoration: none; font-weight: 700; font-size: 14px; padding: 6px 12px; border-radius: 999px; background: var(--ink); color: var(--paper); }
+/* social links: quiet, but always in view */
+.social { display: flex; align-items: center; gap: 6px 14px; margin-top: 20px; flex-wrap: wrap; font-size: 14px; }
+.social-label { color: var(--muted); font-weight: 700; }
+.social a { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-weight: 700; color: var(--ink); padding: 4px 0; border-bottom: 2px solid transparent; }
+.social a:hover { border-bottom-color: var(--gold); }
+.social svg { width: 18px; height: 18px; flex: none; }
 
 /* sections */
 .band { padding: 56px 0; }
@@ -116,6 +134,8 @@ a { color: inherit; }
 /* footer */
 .foot { padding: 28px 0 40px; background: #0d0d0d; color: #bdb7a4; font-size: 15px; }
 .foot p { margin: 4px 0; }
+.foot-social a { color: var(--gold); text-decoration: none; font-weight: 600; }
+.foot-social a:hover { text-decoration: underline; }
 .fine { font-size: 13px; color: #8f8a7a; }
 
 @media (prefers-reduced-motion: reduce) {
