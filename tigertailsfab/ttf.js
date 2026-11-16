@@ -29,8 +29,9 @@
     var body = el("div", "body");
     body.appendChild(el("h3", "", it.title));
     if (it.blurb) body.appendChild(el("p", "", it.blurb));
+    if (it.price) body.appendChild(el("p", "price", it.price));
     var acts = el("div", "acts");
-    var ask = el("a", "btn btn-main sm", "Ask about this");
+    var ask = el("a", "btn btn-main sm", it.ask || "Ask about this");
     ask.href = "#contact";
     ask.addEventListener("click", function () {
       var f = document.getElementById("ask-item");
