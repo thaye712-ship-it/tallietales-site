@@ -58,16 +58,6 @@
     items.forEach(function (it) { g.appendChild(card(it)); });
   });
 
-  var s = document.getElementById("social");
-  [["YouTube", d.youtube], ["Instagram", d.instagram], ["MakerWorld", d.makerworld]].forEach(function (p) {
-    if (!p[1]) return;
-    var a = el("a", "chip", p[0]);
-    a.href = p[1];
-    a.target = "_blank";
-    a.rel = "noopener";
-    s.appendChild(a);
-  });
-
   if (!email) {
     var f0 = document.getElementById("ask"), alt = document.getElementById("ask-alt");
     if (f0) f0.hidden = true;
