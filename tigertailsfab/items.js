@@ -9,6 +9,8 @@
     photo   — file name in img/items/ (leave "" for a striped placeholder)
     link    — its MakerWorld page (leave "" if it isn't on MakerWorld)
     tag     — a short label on the photo, e.g. "Free file", "Made to order"
+    price   — optional price line, e.g. "$12 for a set of 3"
+    ask     — optional text for the ask button (default "Ask about this")
 
   Items marked sample: true are layout examples only. Delete them before
   the page goes live.
@@ -24,6 +26,8 @@ window.TTF = {
       title: "Christmas Cat Ornaments",
       blurb: "Hand-drawn cat ornaments for the tree: a black cat with candy cane ears, a yellow cat in a Santa hat and a white cat with holly. 3, 4, 5 and 6 color versions, no supports, fits a 4 color AMS.",
       photo: "christmas-cat-ornaments.jpg",
+      price: "$12 for a set of 3",
+      ask: "Contact us to order",
       link: "https://makerworld.com/en/models/3600996-christmas-cat-ornaments",
       tag: "New · Free file"
     },
@@ -31,6 +35,8 @@ window.TTF = {
       title: "Christmas Dog Ornaments",
       blurb: "Hand-drawn dog ornaments: labs, golden retrievers and a big mixed-breed pup in Santa hats, reindeer antlers and candy cane ears. 4 and 5 color versions, no supports, fits a 4 color AMS.",
       photo: "christmas-dog-ornaments.jpg",
+      price: "$12 for a set of 3",
+      ask: "Contact us to order",
       link: "https://makerworld.com/en/models/3600888-christmas-dog-ornaments",
       tag: "New · Free file"
     },
