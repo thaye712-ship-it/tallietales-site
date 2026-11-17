@@ -12,6 +12,12 @@
     price   — optional price line, e.g. "$12 for a set of 3"
     deal    — optional second price line, e.g. a set or bundle deal
     ask     — optional text for the ask button (default "Ask about this")
+    photos  — optional extra photos for the item's own page, e.g.
+              ["h3c-nozzle-case-1.jpg", "h3c-nozzle-case-2.jpg"]
+    details — optional bullet points for the item's own page
+    id      — optional page name; by default it is made from the title
+
+  Every card opens its own page (item.html?id=...) with all its photos.
 
   Items marked sample: true are layout examples only. Delete them before
   the page goes live.
@@ -27,6 +33,7 @@ window.TTF = {
       title: "Build-a-Beast: Magnetic Elephant",
       blurb: "A hand-drawn safari elephant, 3D printed with magnets built right in. We pause the print and drop magnets inside, so they are sealed in and the legs snap on. Mix and match parts with the other safari animals. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
       photo: "magnetic-elephant.jpg",
+      photos: ["magnetic-elephant-1.jpg", "magnetic-elephant-2.jpg", "magnetic-elephant-3.jpg", "magnetic-elephant-4.jpg", "magnetic-elephant-5.jpg"],
       price: "$8 per printed animal + shipping",
       deal: "All 4 printed safari animals (crocodile, elephant, giraffe, lion) for $25, free shipping",
       ask: "Contact us to order",
@@ -37,6 +44,7 @@ window.TTF = {
       title: "Build-a-Beast: Magnetic Crocodile",
       blurb: "A hand-drawn safari crocodile, 3D printed with magnets built right in. We pause the print and drop magnets inside, so they are sealed in and the legs snap on. Mix and match parts with the other safari animals. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
       photo: "magnetic-crocodile.jpg",
+      photos: ["magnetic-crocodile-1.jpg", "magnetic-crocodile-2.jpg", "magnetic-crocodile-3.jpg", "magnetic-crocodile-4.jpg", "magnetic-crocodile-5.jpg", "magnetic-crocodile-6.jpg"],
       price: "$8 per printed animal + shipping",
       deal: "All 4 printed safari animals (crocodile, elephant, giraffe, lion) for $25, free shipping",
       ask: "Contact us to order",
@@ -67,6 +75,7 @@ window.TTF = {
       title: "Christmas Cat Ornaments",
       blurb: "Hand-drawn cat ornaments for the tree: a black cat with candy cane ears, a yellow cat in a Santa hat and a white cat with holly. 3, 4, 5 and 6 color versions, no supports, fits a 4 color AMS. Want your own pet or a custom design? Reach out and we'll draw it up for you.",
       photo: "christmas-cat-ornaments.jpg",
+      photos: ["christmas-cat-ornaments-1.jpg", "christmas-cat-ornaments-2.jpg", "christmas-cat-ornaments-3.jpg"],
       price: "$12 for a printed set of 3",
       ask: "Contact us to order",
       link: "https://makerworld.com/en/models/3600996-christmas-cat-ornaments",
@@ -85,6 +94,13 @@ window.TTF = {
       title: "H3C Nozzle (Hotend) Case",
       blurb: "A sliding-lid case that keeps spare H3C hotends safe and organized, with a pocket for the small parts. Comes in a 5-nozzle tray, a 9-nozzle single row, and a 9-nozzle two-row box.",
       photo: "h3c-nozzle-case.jpg",
+      photos: ["h3c-nozzle-case-1.jpg", "h3c-nozzle-case-2.jpg", "h3c-nozzle-case-3.jpg", "h3c-nozzle-case-4.jpg", "h3c-nozzle-case-5.jpg"],
+      details: [
+        "Three sizes: 5-nozzle tray, 9-nozzle single row, 9-nozzle two-row box",
+        "Sliding lid with raised H3C NOZZLES lettering",
+        "Side pocket for wipers, screws and small parts",
+        "Printed to order in your choice of colors"
+      ],
       link: "https://makerworld.com/en/models/3567232-h3c-nozzle-hotend-case",
       tag: "Free file"
     },
@@ -92,6 +108,7 @@ window.TTF = {
       title: "H3C AMS 3H Dryer Box",
       blurb: "A desiccant box that fits to the right of the heater slots in the AMS 3H and holds a lot of desiccant to keep your filament dry. Prints on one plate in PETG.",
       photo: "ams-3h-dryer.jpg",
+      photos: ["ams-3h-dryer-1.jpg", "ams-3h-dryer-2.jpg", "ams-3h-dryer-3.jpg", "ams-3h-dryer-4.jpg"],
       link: "https://makerworld.com/en/models/3567073-h3c-ams-3h-dryer-box",
       tag: "Free file"
     },
@@ -99,6 +116,7 @@ window.TTF = {
       title: "Crochet Amigurumi Eyes",
       blurb: "Embroidering amigurumi eyes is hard, so here is an easy fix: printed sleepy or happy eyes that attach inside the head with yarn or thread through the eyelets. About 27 minutes and 5 g of PLA.",
       photo: "crochet-amigurumi-eyes.jpg",
+      photos: ["crochet-amigurumi-eyes-1.jpg", "crochet-amigurumi-eyes-2.jpg", "crochet-amigurumi-eyes-3.jpg", "crochet-amigurumi-eyes-4.jpg"],
       link: "https://makerworld.com/en/models/3575087-crochet-amigurumi-eyes",
       tag: "Free file"
     }
@@ -114,6 +132,7 @@ window.TTF = {
       title: "Girl Monkey",
       blurb: "A soft, chunky pink monkey with a sage muzzle and ears, finished with our 3D printed sleepy eyes with lashes.",
       photo: "girl-monkey.jpg",
+      photos: ["girl-monkey-1.jpg"],
       link: "https://makerworld.com/en/models/3575087-crochet-amigurumi-eyes",
       tag: "Handmade"
     },
@@ -121,6 +140,7 @@ window.TTF = {
       title: "Flamingo",
       blurb: "A plush pink flamingo with a curved neck, hot pink legs and a black beak, finished with our 3D printed sleepy eyes.",
       photo: "flamingo.jpg",
+      photos: ["flamingo-1.jpg", "flamingo-2.jpg"],
       link: "https://makerworld.com/en/models/3575087-crochet-amigurumi-eyes",
       tag: "Handmade"
     }

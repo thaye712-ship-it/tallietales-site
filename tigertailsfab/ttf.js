@@ -9,9 +9,18 @@
     return n;
   }
 
+  function slug(it) {
+    return it.id || it.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+  window.TTF_slug = slug;
+
   function card(it) {
     var c = el("article", "card" + (it.sample ? " is-sample" : ""));
-    var pic = el("div", "pic");
+    var page = "item.html?id=" + encodeURIComponent(slug(it));
+    // the photo and title open the item's own page with all its photos
+    var pic = el("a", "pic");
+    pic.href = page;
+    pic.setAttribute("aria-label", "More photos of " + it.title);
     if (it.photo) {
       var img = el("img");
       img.src = "img/items/" + it.photo;
@@ -22,18 +31,25 @@
       pic.classList.add("empty");
       pic.appendChild(el("span", "", "Photo coming"));
     }
-    if (it.tag) pic.appendChild(el("span", "tag", it.tag));
     if (it.sample) pic.appendChild(el("span", "sample", "Sample"));
+    var n = 1 + (it.photos ? it.photos.length : 0);
+    if (it.photo && n > 1) pic.appendChild(el("span", "count", n + " photos"));
     c.appendChild(pic);
 
     var body = el("div", "body");
-    body.appendChild(el("h3", "", it.title));
+    // the label sits above the title, not on the photo, so it never covers words in the cover art
+    if (it.tag) body.appendChild(el("span", "tag", it.tag));
+    var h = el("h3");
+    var ha = el("a", "", it.title);
+    ha.href = page;
+    h.appendChild(ha);
+    body.appendChild(h);
     if (it.blurb) body.appendChild(el("p", "", it.blurb));
     if (it.price) body.appendChild(el("p", "price", it.price));
     if (it.deal) body.appendChild(el("p", "deal", it.deal));
     var acts = el("div", "acts");
     var ask = el("a", "btn btn-main sm", it.ask || "Ask about this");
-    ask.href = "#contact";
+    ask.href = document.getElementById("contact") ? "#contact" : "./?item=" + encodeURIComponent(it.title) + "#contact";
     ask.addEventListener("click", function () {
       var f = document.getElementById("ask-item");
       if (f) f.value = it.title;
@@ -50,6 +66,8 @@
     c.appendChild(body);
     return c;
   }
+
+  window.TTF_card = card;
 
   document.querySelectorAll("[data-list]").forEach(function (g) {
     var items = d[g.getAttribute("data-list")] || [];
@@ -116,6 +134,11 @@
     alt2.style.marginTop = "16px";
     alt2.hidden = false;
   }
+
+  // arriving from an item page ("Contact us to order"): fill in which item
+  var q = new URLSearchParams(location.search).get("item");
+  var fi = document.getElementById("ask-item");
+  if (q && fi) fi.value = q;
 
   var link = document.getElementById("email-link");
   if (link) { link.href = "mailto:" + email; link.textContent = email; }
