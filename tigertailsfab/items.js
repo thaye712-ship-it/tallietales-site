@@ -12,6 +12,12 @@
     price   — optional price line, e.g. "$12 for a set of 3"
     deal    — optional second price line, e.g. a set or bundle deal
     ask     — optional text for the ask button (default "Ask about this")
+    photos  — optional extra photos for the item's own page, e.g.
+              ["h3c-nozzle-case-1.jpg", "h3c-nozzle-case-2.jpg"]
+    details — optional bullet points for the item's own page
+    id      — optional page name; by default it is made from the title
+
+  Every card opens its own page (item.html?id=...) with all its photos.
 
   Items marked sample: true are layout examples only. Delete them before
   the page goes live.
@@ -85,6 +91,13 @@ window.TTF = {
       title: "H3C Nozzle (Hotend) Case",
       blurb: "A sliding-lid case that keeps spare H3C hotends safe and organized, with a pocket for the small parts. Comes in a 5-nozzle tray, a 9-nozzle single row, and a 9-nozzle two-row box.",
       photo: "h3c-nozzle-case.jpg",
+      photos: ["h3c-nozzle-case-1.jpg", "h3c-nozzle-case-2.jpg", "h3c-nozzle-case-3.jpg", "h3c-nozzle-case-4.jpg", "h3c-nozzle-case-5.jpg", "h3c-nozzle-case-6.jpg"],
+      details: [
+        "Three sizes: 5-nozzle tray, 9-nozzle single row, 9-nozzle two-row box",
+        "Sliding lid with raised H3C NOZZLES lettering",
+        "Side pocket for wipers, screws and small parts",
+        "Printed to order in your choice of colors"
+      ],
       link: "https://makerworld.com/en/models/3567232-h3c-nozzle-hotend-case",
       tag: "Free file"
     },
