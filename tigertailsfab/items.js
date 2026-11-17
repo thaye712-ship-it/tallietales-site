@@ -25,8 +25,8 @@ window.TTF = {
   prints: [
     {
       title: "Magnetic Safari Animals",
-      blurb: "A crocodile, elephant, giraffe and lion, 3D printed with magnets built right in. We pause the print partway and drop the magnets inside, so they are sealed in for good. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
-      photo: "",
+      blurb: "A crocodile, elephant, giraffe and lion, 3D printed with magnets built right in. We pause the print partway and drop the magnets inside, so they are sealed in and the legs snap on to stand the animal up. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
+      photo: "magnetic-animals.jpg",
       price: "$8 per printed animal + shipping",
       deal: "All 4 printed animals for $25, free shipping",
       ask: "Contact us to order",
