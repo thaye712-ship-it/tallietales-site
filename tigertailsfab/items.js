@@ -10,6 +10,7 @@
     link    — its MakerWorld page (leave "" if it isn't on MakerWorld)
     tag     — a short label on the photo, e.g. "Free file", "Made to order"
     price   — optional price line, e.g. "$12 for a set of 3"
+    deal    — optional second price line, e.g. a set or bundle deal
     ask     — optional text for the ask button (default "Ask about this")
 
   Items marked sample: true are layout examples only. Delete them before
@@ -23,19 +24,59 @@ window.TTF = {
 
   prints: [
     {
+      title: "Build-a-Beast: Magnetic Elephant",
+      blurb: "A hand-drawn safari elephant, 3D printed with magnets built right in. We pause the print and drop magnets inside, so they are sealed in and the legs snap on. Mix and match parts with the other safari animals. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
+      photo: "magnetic-elephant.jpg",
+      price: "$8 per printed animal + shipping",
+      deal: "All 4 printed safari animals (crocodile, elephant, giraffe, lion) for $25, free shipping",
+      ask: "Contact us to order",
+      link: "https://makerworld.com/en/models/3629575-magnetic-elephant-toy",
+      tag: "New · Free file"
+    },
+    {
+      title: "Build-a-Beast: Magnetic Crocodile",
+      blurb: "A hand-drawn safari crocodile, 3D printed with magnets built right in. We pause the print and drop magnets inside, so they are sealed in and the legs snap on. Mix and match parts with the other safari animals. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
+      photo: "magnetic-crocodile.jpg",
+      price: "$8 per printed animal + shipping",
+      deal: "All 4 printed safari animals (crocodile, elephant, giraffe, lion) for $25, free shipping",
+      ask: "Contact us to order",
+      link: "https://makerworld.com/en/models/3629659-magnetic-crocodile-toy",
+      tag: "New · Free file"
+    },
+    {
+      title: "Build-a-Beast: Magnetic Giraffe",
+      blurb: "A hand-drawn safari giraffe, 3D printed with magnets built right in. We pause the print and drop magnets inside, so they are sealed in and the legs snap on. Mix and match parts with the other safari animals. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
+      photo: "magnetic-giraffe.jpg",
+      price: "$8 per printed animal + shipping",
+      deal: "All 4 printed safari animals (crocodile, elephant, giraffe, lion) for $25, free shipping",
+      ask: "Contact us to order",
+      link: "",
+      tag: "New"
+    },
+    {
+      title: "Build-a-Beast: Magnetic Lion",
+      blurb: "A hand-drawn safari lion, 3D printed with magnets built right in. We pause the print and drop magnets inside, so they are sealed in and the legs snap on. Mix and match parts with the other safari animals. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
+      photo: "magnetic-lion.jpg",
+      price: "$8 per printed animal + shipping",
+      deal: "All 4 printed safari animals (crocodile, elephant, giraffe, lion) for $25, free shipping",
+      ask: "Contact us to order",
+      link: "",
+      tag: "New"
+    },
+    {
       title: "Christmas Cat Ornaments",
-      blurb: "Hand-drawn cat ornaments for the tree: a black cat with candy cane ears, a yellow cat in a Santa hat and a white cat with holly. 3, 4, 5 and 6 color versions, no supports, fits a 4 color AMS.",
+      blurb: "Hand-drawn cat ornaments for the tree: a black cat with candy cane ears, a yellow cat in a Santa hat and a white cat with holly. 3, 4, 5 and 6 color versions, no supports, fits a 4 color AMS. Want your own pet or a custom design? Reach out and we'll draw it up for you.",
       photo: "christmas-cat-ornaments.jpg",
-      price: "$12 for a set of 3",
+      price: "$12 for a printed set of 3",
       ask: "Contact us to order",
       link: "https://makerworld.com/en/models/3600996-christmas-cat-ornaments",
       tag: "New · Free file"
     },
     {
       title: "Christmas Dog Ornaments",
-      blurb: "Hand-drawn dog ornaments: labs, golden retrievers and a big mixed-breed pup in Santa hats, reindeer antlers and candy cane ears. 4 and 5 color versions, no supports, fits a 4 color AMS.",
+      blurb: "Hand-drawn dog ornaments: labs, golden retrievers and a big mixed-breed pup in Santa hats, reindeer antlers and candy cane ears. 4 and 5 color versions, no supports, fits a 4 color AMS. Want your own pet or a custom design? Reach out and we'll draw it up for you.",
       photo: "christmas-dog-ornaments.jpg",
-      price: "$12 for a set of 3",
+      price: "$12 for a printed set of 3",
       ask: "Contact us to order",
       link: "https://makerworld.com/en/models/3600888-christmas-dog-ornaments",
       tag: "New · Free file"
