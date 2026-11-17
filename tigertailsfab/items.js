@@ -44,6 +44,26 @@ window.TTF = {
       tag: "New · Free file"
     },
     {
+      title: "Build-a-Beast: Magnetic Giraffe",
+      blurb: "A hand-drawn safari giraffe, 3D printed with magnets built right in. We pause the print and drop magnets inside, so they are sealed in and the legs snap on. Mix and match parts with the other safari animals. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
+      photo: "magnetic-giraffe.jpg",
+      price: "$8 per printed animal + shipping",
+      deal: "All 4 printed safari animals (crocodile, elephant, giraffe, lion) for $25, free shipping",
+      ask: "Contact us to order",
+      link: "",
+      tag: "New"
+    },
+    {
+      title: "Build-a-Beast: Magnetic Lion",
+      blurb: "A hand-drawn safari lion, 3D printed with magnets built right in. We pause the print and drop magnets inside, so they are sealed in and the legs snap on. Mix and match parts with the other safari animals. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
+      photo: "magnetic-lion.jpg",
+      price: "$8 per printed animal + shipping",
+      deal: "All 4 printed safari animals (crocodile, elephant, giraffe, lion) for $25, free shipping",
+      ask: "Contact us to order",
+      link: "",
+      tag: "New"
+    },
+    {
       title: "Christmas Cat Ornaments",
       blurb: "Hand-drawn cat ornaments for the tree: a black cat with candy cane ears, a yellow cat in a Santa hat and a white cat with holly. 3, 4, 5 and 6 color versions, no supports, fits a 4 color AMS. Want your own pet or a custom design? Reach out and we'll draw it up for you.",
       photo: "christmas-cat-ornaments.jpg",
