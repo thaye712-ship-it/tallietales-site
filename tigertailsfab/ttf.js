@@ -68,6 +68,15 @@
     return;
   }
 
+  // email is set: show the email form first, with MakerWorld as a second option below it
+  var alt2 = document.getElementById("ask-alt"), mw2 = document.getElementById("ask-mw"), f2 = document.getElementById("ask");
+  if (alt2 && f2) {
+    if (mw2) { mw2.className = "btn btn-line"; mw2.textContent = "Or message us on MakerWorld"; if (d.makerworld) mw2.href = d.makerworld; }
+    f2.parentNode.insertBefore(alt2, f2.nextSibling);
+    alt2.style.marginTop = "16px";
+    alt2.hidden = false;
+  }
+
   var link = document.getElementById("email-link");
   if (link) { link.href = "mailto:" + email; link.textContent = email; }
 

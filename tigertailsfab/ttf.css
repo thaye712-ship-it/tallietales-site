@@ -71,7 +71,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero {
   display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 28px;
   min-height: 640px; padding: 48px 16px 0; text-align: center;
-  background: var(--wall) url("img/bench.jpg") center 38% / cover no-repeat;
+  background: var(--wall) url("img/bench.jpg") center top / cover no-repeat;
   border-bottom: 8px solid var(--wood);
 }
 @media (max-width: 900px) { .hero { background-image: url("img/bench-1280.jpg"); } }
@@ -85,19 +85,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero h1 { font: 800 clamp(34px, 5.4vw, 52px)/1.02 var(--display); text-transform: uppercase; margin: 0; text-wrap: balance; }
 .lede { font-size: 17px; color: var(--soft); margin: 0; max-width: 36em; }
 .hero .btns { justify-content: center; }
-@media (max-width: 640px) {
-  .hero { min-height: 0; padding-top: 32px; background-position: 30% 40%; }
-  .hero .logo { width: min(300px, 82%); }
+@media (max-width: 760px) {
+  /* phones: the bench is a strip behind the logo only; the text card sits below it */
+  .hero { min-height: 0; padding: 24px 16px 32px; gap: 0; justify-content: flex-start; background-size: auto 300px; background-position: center top; }
+  .hero .logo { width: min(280px, 76%); }
+  .hero-card { margin-top: 64px; border-bottom: 1px solid #3a4049; border-radius: 16px; }
 }
-/* wide screens: show the whole bench like the YouTube banner, logo in the glow
-   between the two printers, text card resting on the drawers */
+/* wide screens: the bench banner (cut at the desktop, no drawers) across the top,
+   logo in the lamp glow between the two printers, text card below the banner */
 @media (min-width: 761px) {
   .hero {
-    display: flow-root; min-height: 0; padding: 0 16px 48px; border-bottom: none;
-    background: url("img/bench.jpg") center top / 100% auto no-repeat;
+    display: flow-root; min-height: 0; padding: 0 16px 48px;
+    background: var(--wall) url("img/bench.jpg") center top / 100% auto no-repeat;
   }
-  .hero .logo { width: 23%; margin: 18.5% auto 0; }
-  .hero-card { margin: 1.5% auto 0; border-bottom: 1px solid #3a4049; border-radius: 16px; box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+  .hero .logo { width: 22%; margin: 15.5% auto 0; }
+  .hero-card { margin: 4.5% auto 0; border-bottom: 1px solid #3a4049; border-radius: 16px; box-shadow: 0 18px 40px rgba(0,0,0,.45); }
 }
 
 /* buttons */
