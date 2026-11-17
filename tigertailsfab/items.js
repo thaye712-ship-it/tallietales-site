@@ -24,14 +24,24 @@ window.TTF = {
 
   prints: [
     {
-      title: "Magnetic Safari Animals",
-      blurb: "A crocodile, elephant, giraffe and lion, 3D printed with magnets built right in. We pause the print partway and drop the magnets inside, so they are sealed in and the legs snap on to stand the animal up. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
-      photo: "magnetic-animals.jpg",
+      title: "Build-a-Beast: Magnetic Elephant",
+      blurb: "A hand-drawn safari elephant, 3D printed with magnets built right in. We pause the print and drop magnets inside, so they are sealed in and the legs snap on. Mix and match parts with the other safari animals. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
+      photo: "magnetic-elephant.jpg",
       price: "$8 per printed animal + shipping",
-      deal: "All 4 printed animals for $25, free shipping",
+      deal: "All 4 printed safari animals (crocodile, elephant, giraffe, lion) for $25, free shipping",
       ask: "Contact us to order",
-      link: "",
-      tag: "New · Made to order"
+      link: "https://makerworld.com/en/models/3629575-magnetic-elephant-toy",
+      tag: "New · Free file"
+    },
+    {
+      title: "Build-a-Beast: Magnetic Crocodile",
+      blurb: "A hand-drawn safari crocodile, 3D printed with magnets built right in. We pause the print and drop magnets inside, so they are sealed in and the legs snap on. Mix and match parts with the other safari animals. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
+      photo: "magnetic-crocodile.jpg",
+      price: "$8 per printed animal + shipping",
+      deal: "All 4 printed safari animals (crocodile, elephant, giraffe, lion) for $25, free shipping",
+      ask: "Contact us to order",
+      link: "https://makerworld.com/en/models/3629659-magnetic-crocodile-toy",
+      tag: "New · Free file"
     },
     {
       title: "Christmas Cat Ornaments",
