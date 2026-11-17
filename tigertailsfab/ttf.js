@@ -22,11 +22,12 @@
       pic.classList.add("empty");
       pic.appendChild(el("span", "", "Photo coming"));
     }
-    if (it.tag) pic.appendChild(el("span", "tag", it.tag));
     if (it.sample) pic.appendChild(el("span", "sample", "Sample"));
     c.appendChild(pic);
 
     var body = el("div", "body");
+    // the label sits above the title, not on the photo, so it never covers words in the cover art
+    if (it.tag) body.appendChild(el("span", "tag", it.tag));
     body.appendChild(el("h3", "", it.title));
     if (it.blurb) body.appendChild(el("p", "", it.blurb));
     if (it.price) body.appendChild(el("p", "price", it.price));

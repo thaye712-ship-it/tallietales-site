@@ -54,17 +54,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .top nav a:hover { background: #22262d; }
 .top nav .nav-cta { background: var(--gold); color: var(--wall); }
 .top nav .nav-cta:hover { background: var(--gold-deep); }
+/* phones: two rows. Row 1 is the name, row 2 the social icons and the menu. */
 @media (max-width: 640px) {
-  .top nav a:not(.nav-cta) { display: none; }
+  html { scroll-padding-top: 104px; }
+  .top .wrap { flex-wrap: wrap; justify-content: center; height: auto; padding: 8px 12px; row-gap: 6px; }
+  .brand { font-size: 23px; }
+  .brand img { width: 32px; height: 32px; }
+  .top-right { width: 100%; justify-content: space-between; gap: 6px; }
+  .top-social { padding-right: 6px; }
+  .top-social a { width: 32px; height: 34px; }
+  .top nav { gap: 2px; }
+  .top nav a { padding: 7px 8px; font-size: 14px; }
 }
-@media (max-width: 400px) {
-  .top .wrap { padding-left: 14px; padding-right: 14px; gap: 8px; }
-  .brand { font-size: 21px; }
-  .brand img { display: none; }
-  .top-right { gap: 6px; }
-  .top-social { padding-right: 4px; }
-  .top-social a { width: 30px; }
-  .top nav .nav-cta { padding: 8px; }
+@media (max-width: 360px) {
+  .top-social a { width: 28px; }
+  .top nav a { padding: 7px 6px; font-size: 13px; }
 }
 
 /* hero: the workbench, logo in the lamp glow, text card resting on the bench */
@@ -131,7 +135,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .pic { position: relative; aspect-ratio: 4 / 3; background: #0f1114; }
 .pic img { width: 100%; height: 100%; object-fit: cover; }
 .pic.empty { display: grid; place-items: center; background: repeating-linear-gradient(-45deg, #1d1d1d 0 14px, #262626 14px 28px); color: var(--muted); font-weight: 700; font-size: 14px; }
-.tag { position: absolute; left: 12px; top: 12px; background: var(--gold); color: var(--wall); font-weight: 700; font-size: 12px; padding: 5px 10px; border-radius: 6px; }
+.tag { align-self: flex-start; background: var(--gold); color: var(--wall); font-weight: 700; font-size: 12px; line-height: 1.2; padding: 4px 9px; border-radius: 6px; }
 .sample { position: absolute; right: 10px; top: 10px; background: #d92d20; color: #fff; font-weight: 800; font-size: 12px; padding: 4px 9px; border-radius: 999px; }
 .body { padding: 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .body h3 { margin: 0; font: 800 23px/1.1 var(--display); text-transform: uppercase; }
