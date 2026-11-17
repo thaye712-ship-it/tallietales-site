@@ -10,6 +10,7 @@
     link    — its MakerWorld page (leave "" if it isn't on MakerWorld)
     tag     — a short label on the photo, e.g. "Free file", "Made to order"
     price   — optional price line, e.g. "$12 for a set of 3"
+    deal    — optional second price line, e.g. a set or bundle deal
     ask     — optional text for the ask button (default "Ask about this")
 
   Items marked sample: true are layout examples only. Delete them before
@@ -22,6 +23,16 @@ window.TTF = {
   instagram: "https://www.instagram.com/tiger_tails_fab/",
 
   prints: [
+    {
+      title: "Magnetic Animals",
+      blurb: "A crocodile, elephant, giraffe and lion, 3D printed with magnets built right in. We pause the print partway and drop the magnets inside, so they are sealed in for good.",
+      photo: "",
+      price: "$8 each + shipping",
+      deal: "All 4 for $25 with free shipping",
+      ask: "Contact us to order",
+      link: "",
+      tag: "New · Made to order"
+    },
     {
       title: "Christmas Cat Ornaments",
       blurb: "Hand-drawn cat ornaments for the tree: a black cat with candy cane ears, a yellow cat in a Santa hat and a white cat with holly. 3, 4, 5 and 6 color versions, no supports, fits a 4 color AMS.",

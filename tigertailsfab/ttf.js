@@ -30,6 +30,7 @@
     body.appendChild(el("h3", "", it.title));
     if (it.blurb) body.appendChild(el("p", "", it.blurb));
     if (it.price) body.appendChild(el("p", "price", it.price));
+    if (it.deal) body.appendChild(el("p", "deal", it.deal));
     var acts = el("div", "acts");
     var ask = el("a", "btn btn-main sm", it.ask || "Ask about this");
     ask.href = "#contact";
