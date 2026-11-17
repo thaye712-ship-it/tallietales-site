@@ -24,29 +24,29 @@ window.TTF = {
 
   prints: [
     {
-      title: "Magnetic Animals",
-      blurb: "A crocodile, elephant, giraffe and lion, 3D printed with magnets built right in. We pause the print partway and drop the magnets inside, so they are sealed in for good.",
+      title: "Magnetic Safari Animals",
+      blurb: "A crocodile, elephant, giraffe and lion, 3D printed with magnets built right in. We pause the print partway and drop the magnets inside, so they are sealed in for good. Want a different animal or a custom design? Reach out and we'll draw it up for you.",
       photo: "",
-      price: "$8 each + shipping",
-      deal: "All 4 for $25 with free shipping",
+      price: "$8 per printed animal + shipping",
+      deal: "All 4 printed animals for $25, free shipping",
       ask: "Contact us to order",
       link: "",
       tag: "New · Made to order"
     },
     {
       title: "Christmas Cat Ornaments",
-      blurb: "Hand-drawn cat ornaments for the tree: a black cat with candy cane ears, a yellow cat in a Santa hat and a white cat with holly. 3, 4, 5 and 6 color versions, no supports, fits a 4 color AMS.",
+      blurb: "Hand-drawn cat ornaments for the tree: a black cat with candy cane ears, a yellow cat in a Santa hat and a white cat with holly. 3, 4, 5 and 6 color versions, no supports, fits a 4 color AMS. Want your own pet or a custom design? Reach out and we'll draw it up for you.",
       photo: "christmas-cat-ornaments.jpg",
-      price: "$12 for a set of 3",
+      price: "$12 for a printed set of 3",
       ask: "Contact us to order",
       link: "https://makerworld.com/en/models/3600996-christmas-cat-ornaments",
       tag: "New · Free file"
     },
     {
       title: "Christmas Dog Ornaments",
-      blurb: "Hand-drawn dog ornaments: labs, golden retrievers and a big mixed-breed pup in Santa hats, reindeer antlers and candy cane ears. 4 and 5 color versions, no supports, fits a 4 color AMS.",
+      blurb: "Hand-drawn dog ornaments: labs, golden retrievers and a big mixed-breed pup in Santa hats, reindeer antlers and candy cane ears. 4 and 5 color versions, no supports, fits a 4 color AMS. Want your own pet or a custom design? Reach out and we'll draw it up for you.",
       photo: "christmas-dog-ornaments.jpg",
-      price: "$12 for a set of 3",
+      price: "$12 for a printed set of 3",
       ask: "Contact us to order",
       link: "https://makerworld.com/en/models/3600888-christmas-dog-ornaments",
       tag: "New · Free file"
