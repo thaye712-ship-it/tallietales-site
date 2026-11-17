@@ -104,6 +104,11 @@ window.TTF = {
     }
   ],
 
+  // Videos section: YouTube Shorts by video ID (the part after /shorts/ in the link).
+  // The section stays hidden until this list has something in it.
+  videos: [
+  ],
+
   crochet: [
     {
       title: "Girl Monkey",
